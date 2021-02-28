@@ -28,6 +28,17 @@ struct ContentView: View {
                             .foregroundColor(.orange)
                     }
                 }.padding(.top)
+                Button {
+                    SweatAndToil.fetchCountries { (countries) in
+                        if countries.count != 0 {
+                            print(countries)
+                        }else {
+                            print("Nothing returned")
+                        }
+                    }
+                } label : {
+                    Text("Call API")
+                }
                 
                 Picker("", selection: $selection) {
                     Image(systemName: "cart.fill").tag(0)
