@@ -1,0 +1,19 @@
+//
+//  AdvancementLevel.swift
+//  shopaware
+//
+//  Created by Salaar Liaqat on 2021-02-28.
+//
+
+import Foundation
+
+struct AdvancementLevel: Codable {
+    public var id: String
+    public var name: String
+    
+    init(id: String, name: String) {
+        self.id = id
+        self.name = name
+    }
+    
+}

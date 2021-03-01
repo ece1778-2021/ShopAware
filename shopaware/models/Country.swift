@@ -7,10 +7,6 @@
 
 import Foundation
 
-struct Countries: Codable {
-    public var countries: [Country]?
-    
-}
 
 struct Country: Codable {
     public var id: String
