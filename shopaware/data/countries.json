@@ -1,0 +1,1038 @@
+[
+    {
+        "id": "1",
+        "name": "Afghanistan",
+        "region_id": "1",
+        "region": "Asia & the Pacific",
+        "num_territories": "0"
+    },
+    {
+        "id": "10",
+        "name": "Bangladesh",
+        "region_id": "1",
+        "region": "Asia & the Pacific",
+        "num_territories": "0"
+    },
+    {
+        "id": "13",
+        "name": "Bhutan",
+        "region_id": "1",
+        "region": "Asia & the Pacific",
+        "num_territories": "0"
+    },
+    {
+        "id": "21",
+        "name": "Burma",
+        "region_id": "1",
+        "region": "Asia & the Pacific",
+        "num_territories": "0"
+    },
+    {
+        "id": "24",
+        "name": "Cambodia",
+        "region_id": "1",
+        "region": "Asia & the Pacific",
+        "num_territories": "0"
+    },
+    {
+        "id": "29",
+        "name": "China",
+        "region_id": "1",
+        "region": "Asia & the Pacific",
+        "num_territories": "0"
+    },
+    {
+        "id": "30",
+        "name": "Christmas Island",
+        "region_id": "1",
+        "region": "Asia & the Pacific",
+        "num_territories": "0"
+    },
+    {
+        "id": "31",
+        "name": "Cocos (Keeling) Islands",
+        "region_id": "1",
+        "region": "Asia & the Pacific",
+        "num_territories": "0"
+    },
+    {
+        "id": "36",
+        "name": "Cook Islands",
+        "region_id": "1",
+        "region": "Asia & the Pacific",
+        "num_territories": "0"
+    },
+    {
+        "id": "48",
+        "name": "Fiji",
+        "region_id": "1",
+        "region": "Asia & the Pacific",
+        "num_territories": "0"
+    },
+    {
+        "id": "59",
+        "name": "Heard and McDonald Islands",
+        "region_id": "1",
+        "region": "Asia & the Pacific",
+        "num_territories": "0"
+    },
+    {
+        "id": "61",
+        "name": "India",
+        "region_id": "1",
+        "region": "Asia & the Pacific",
+        "num_territories": "0"
+    },
+    {
+        "id": "62",
+        "name": "Indonesia",
+        "region_id": "1",
+        "region": "Asia & the Pacific",
+        "num_territories": "0"
+    },
+    {
+        "id": "67",
+        "name": "Kazakhstan",
+        "region_id": "1",
+        "region": "Asia & the Pacific",
+        "num_territories": "0"
+    },
+    {
+        "id": "69",
+        "name": "Kiribati",
+        "region_id": "1",
+        "region": "Asia & the Pacific",
+        "num_territories": "0"
+    },
+    {
+        "id": "71",
+        "name": "Kyrgyz Republic",
+        "region_id": "1",
+        "region": "Asia & the Pacific",
+        "num_territories": "0"
+    },
+    {
+        "id": "78",
+        "name": "Malaysia",
+        "region_id": "1",
+        "region": "Asia & the Pacific",
+        "num_territories": "0"
+    },
+    {
+        "id": "79",
+        "name": "Maldives",
+        "region_id": "1",
+        "region": "Asia & the Pacific",
+        "num_territories": "0"
+    },
+    {
+        "id": "85",
+        "name": "Mongolia",
+        "region_id": "1",
+        "region": "Asia & the Pacific",
+        "num_territories": "0"
+    },
+    {
+        "id": "91",
+        "name": "Nepal",
+        "region_id": "1",
+        "region": "Asia & the Pacific",
+        "num_territories": "0"
+    },
+    {
+        "id": "95",
+        "name": "Niue",
+        "region_id": "1",
+        "region": "Asia & the Pacific",
+        "num_territories": "0"
+    },
+    {
+        "id": "96",
+        "name": "Norfolk Island",
+        "region_id": "1",
+        "region": "Asia & the Pacific",
+        "num_territories": "0"
+    },
+    {
+        "id": "97",
+        "name": "North Korea",
+        "region_id": "1",
+        "region": "Asia & the Pacific",
+        "num_territories": "0"
+    },
+    {
+        "id": "99",
+        "name": "Pakistan",
+        "region_id": "1",
+        "region": "Asia & the Pacific",
+        "num_territories": "5"
+    },
+    {
+        "id": "101",
+        "name": "Papua New Guinea",
+        "region_id": "1",
+        "region": "Asia & the Pacific",
+        "num_territories": "0"
+    },
+    {
+        "id": "104",
+        "name": "Philippines",
+        "region_id": "1",
+        "region": "Asia & the Pacific",
+        "num_territories": "0"
+    },
+    {
+        "id": "112",
+        "name": "Samoa",
+        "region_id": "1",
+        "region": "Asia & the Pacific",
+        "num_territories": "0"
+    },
+    {
+        "id": "117",
+        "name": "Solomon Islands",
+        "region_id": "1",
+        "region": "Asia & the Pacific",
+        "num_territories": "0"
+    },
+    {
+        "id": "122",
+        "name": "Sri Lanka",
+        "region_id": "1",
+        "region": "Asia & the Pacific",
+        "num_territories": "0"
+    },
+    {
+        "id": "125",
+        "name": "Tajikistan",
+        "region_id": "1",
+        "region": "Asia & the Pacific",
+        "num_territories": "0"
+    },
+    {
+        "id": "127",
+        "name": "Thailand",
+        "region_id": "1",
+        "region": "Asia & the Pacific",
+        "num_territories": "0"
+    },
+    {
+        "id": "128",
+        "name": "Timor-Leste",
+        "region_id": "1",
+        "region": "Asia & the Pacific",
+        "num_territories": "0"
+    },
+    {
+        "id": "130",
+        "name": "Tokelau",
+        "region_id": "1",
+        "region": "Asia & the Pacific",
+        "num_territories": "0"
+    },
+    {
+        "id": "131",
+        "name": "Tonga",
+        "region_id": "1",
+        "region": "Asia & the Pacific",
+        "num_territories": "0"
+    },
+    {
+        "id": "134",
+        "name": "Turkmenistan",
+        "region_id": "1",
+        "region": "Asia & the Pacific",
+        "num_territories": "0"
+    },
+    {
+        "id": "135",
+        "name": "Tuvalu",
+        "region_id": "1",
+        "region": "Asia & the Pacific",
+        "num_territories": "0"
+    },
+    {
+        "id": "139",
+        "name": "Uzbekistan",
+        "region_id": "1",
+        "region": "Asia & the Pacific",
+        "num_territories": "0"
+    },
+    {
+        "id": "140",
+        "name": "Vanuatu",
+        "region_id": "1",
+        "region": "Asia & the Pacific",
+        "num_territories": "0"
+    },
+    {
+        "id": "142",
+        "name": "Vietnam",
+        "region_id": "1",
+        "region": "Asia & the Pacific",
+        "num_territories": "0"
+    },
+    {
+        "id": "2",
+        "name": "Albania",
+        "region_id": "2",
+        "region": "Europe & Eurasia",
+        "num_territories": "0"
+    },
+    {
+        "id": "5",
+        "name": "Anguilla",
+        "region_id": "2",
+        "region": "Europe & Eurasia",
+        "num_territories": "0"
+    },
+    {
+        "id": "7",
+        "name": "Armenia",
+        "region_id": "2",
+        "region": "Europe & Eurasia",
+        "num_territories": "0"
+    },
+    {
+        "id": "8",
+        "name": "Azerbaijan",
+        "region_id": "2",
+        "region": "Europe & Eurasia",
+        "num_territories": "0"
+    },
+    {
+        "id": "15",
+        "name": "Bosnia and Herzegovina",
+        "region_id": "2",
+        "region": "Europe & Eurasia",
+        "num_territories": "4"
+    },
+    {
+        "id": "18",
+        "name": "British Indian Ocean Territories",
+        "region_id": "2",
+        "region": "Europe & Eurasia",
+        "num_territories": "0"
+    },
+    {
+        "id": "19",
+        "name": "British Virgin Islands",
+        "region_id": "2",
+        "region": "Europe & Eurasia",
+        "num_territories": "0"
+    },
+    {
+        "id": "47",
+        "name": "Falkland Islands (Islas Malvinas)",
+        "region_id": "2",
+        "region": "Europe & Eurasia",
+        "num_territories": "0"
+    },
+    {
+        "id": "51",
+        "name": "Georgia",
+        "region_id": "2",
+        "region": "Europe & Eurasia",
+        "num_territories": "0"
+    },
+    {
+        "id": "70",
+        "name": "Kosovo",
+        "region_id": "2",
+        "region": "Europe & Eurasia",
+        "num_territories": "0"
+    },
+    {
+        "id": "75",
+        "name": "North Macedonia",
+        "region_id": "2",
+        "region": "Europe & Eurasia",
+        "num_territories": "0"
+    },
+    {
+        "id": "84",
+        "name": "Moldova",
+        "region_id": "2",
+        "region": "Europe & Eurasia",
+        "num_territories": "0"
+    },
+    {
+        "id": "86",
+        "name": "Montenegro",
+        "region_id": "2",
+        "region": "Europe & Eurasia",
+        "num_territories": "0"
+    },
+    {
+        "id": "87",
+        "name": "Montserrat",
+        "region_id": "2",
+        "region": "Europe & Eurasia",
+        "num_territories": "0"
+    },
+    {
+        "id": "105",
+        "name": "Pitcairn Islands",
+        "region_id": "2",
+        "region": "Europe & Eurasia",
+        "num_territories": "0"
+    },
+    {
+        "id": "106",
+        "name": "Russia",
+        "region_id": "2",
+        "region": "Europe & Eurasia",
+        "num_territories": "0"
+    },
+    {
+        "id": "108",
+        "name": "Saint Helena, Ascensi\u00c3\u00b3n, and Trist\u00c3\u00a1n da Cunha",
+        "region_id": "2",
+        "region": "Europe & Eurasia",
+        "num_territories": "0"
+    },
+    {
+        "id": "114",
+        "name": "Serbia",
+        "region_id": "2",
+        "region": "Europe & Eurasia",
+        "num_territories": "0"
+    },
+    {
+        "id": "133",
+        "name": "Turkey",
+        "region_id": "2",
+        "region": "Europe & Eurasia",
+        "num_territories": "0"
+    },
+    {
+        "id": "137",
+        "name": "Ukraine",
+        "region_id": "2",
+        "region": "Europe & Eurasia",
+        "num_territories": "0"
+    },
+    {
+        "id": "143",
+        "name": "Wallis and Futuna",
+        "region_id": "2",
+        "region": "Europe & Eurasia",
+        "num_territories": "0"
+    },
+    {
+        "id": "3",
+        "name": "Algeria",
+        "region_id": "3",
+        "region": "Middle East & North Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "9",
+        "name": "Bahrain",
+        "region_id": "3",
+        "region": "Middle East & North Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "43",
+        "name": "Egypt",
+        "region_id": "3",
+        "region": "Middle East & North Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "63",
+        "name": "Iran",
+        "region_id": "3",
+        "region": "Middle East & North Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "64",
+        "name": "Iraq",
+        "region_id": "3",
+        "region": "Middle East & North Africa",
+        "num_territories": "3"
+    },
+    {
+        "id": "66",
+        "name": "Jordan",
+        "region_id": "3",
+        "region": "Middle East & North Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "72",
+        "name": "Lebanon",
+        "region_id": "3",
+        "region": "Middle East & North Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "88",
+        "name": "Morocco",
+        "region_id": "3",
+        "region": "Middle East & North Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "98",
+        "name": "Oman",
+        "region_id": "3",
+        "region": "Middle East & North Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "132",
+        "name": "Tunisia",
+        "region_id": "3",
+        "region": "Middle East & North Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "144",
+        "name": "West Bank and the Gaza Strip",
+        "region_id": "3",
+        "region": "Middle East & North Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "145",
+        "name": "Western Sahara",
+        "region_id": "3",
+        "region": "Middle East & North Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "146",
+        "name": "Yemen",
+        "region_id": "3",
+        "region": "Middle East & North Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "4",
+        "name": "Angola",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "12",
+        "name": "Benin",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "16",
+        "name": "Botswana",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "20",
+        "name": "Burkina Faso",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "22",
+        "name": "Burundi",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "23",
+        "name": "Cabo Verde",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "25",
+        "name": "Cameroon",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "26",
+        "name": "Central African Republic",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "27",
+        "name": "Chad",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "33",
+        "name": "Comoros",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "34",
+        "name": "Congo, Democratic Republic of the",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "35",
+        "name": "Congo, Republic of the",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "38",
+        "name": "C\u00c3\u00b4te d\u00e2\u0080\u0099Ivoire",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "39",
+        "name": "Djibouti",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "45",
+        "name": "Eritrea",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "46",
+        "name": "Ethiopia",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "49",
+        "name": "Gabon",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "50",
+        "name": "The Gambia",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "52",
+        "name": "Ghana",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "55",
+        "name": "Guinea-Bissau",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "56",
+        "name": "Guinea",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "68",
+        "name": "Kenya",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "73",
+        "name": "Lesotho",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "74",
+        "name": "Liberia",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "76",
+        "name": "Madagascar",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "77",
+        "name": "Malawi",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "80",
+        "name": "Mali",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "81",
+        "name": "Mauritania",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "82",
+        "name": "Mauritius",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "89",
+        "name": "Mozambique",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "90",
+        "name": "Namibia",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "93",
+        "name": "Niger",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "94",
+        "name": "Nigeria",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "107",
+        "name": "Rwanda",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "111",
+        "name": "S\u00c3\u00a3o Tom\u00c3\u00a9 and Pr\u00c3\u00adncipe",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "113",
+        "name": "Senegal",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "115",
+        "name": "Seychelles",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "116",
+        "name": "Sierra Leone",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "118",
+        "name": "Somalia",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "4"
+    },
+    {
+        "id": "119",
+        "name": "South Africa",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "120",
+        "name": "South Sudan",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "121",
+        "name": "Sudan",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "124",
+        "name": "Eswatini",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "126",
+        "name": "Tanzania",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "2"
+    },
+    {
+        "id": "129",
+        "name": "Togo",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "136",
+        "name": "Uganda",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "147",
+        "name": "Zambia",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "148",
+        "name": "Zimbabwe",
+        "region_id": "4",
+        "region": "Sub-Saharan Africa",
+        "num_territories": "0"
+    },
+    {
+        "id": "6",
+        "name": "Argentina",
+        "region_id": "5",
+        "region": "Latin America & the Caribbean",
+        "num_territories": "0"
+    },
+    {
+        "id": "11",
+        "name": "Belize",
+        "region_id": "5",
+        "region": "Latin America & the Caribbean",
+        "num_territories": "0"
+    },
+    {
+        "id": "14",
+        "name": "Bolivia",
+        "region_id": "5",
+        "region": "Latin America & the Caribbean",
+        "num_territories": "0"
+    },
+    {
+        "id": "17",
+        "name": "Brazil",
+        "region_id": "5",
+        "region": "Latin America & the Caribbean",
+        "num_territories": "0"
+    },
+    {
+        "id": "28",
+        "name": "Chile",
+        "region_id": "5",
+        "region": "Latin America & the Caribbean",
+        "num_territories": "0"
+    },
+    {
+        "id": "32",
+        "name": "Colombia",
+        "region_id": "5",
+        "region": "Latin America & the Caribbean",
+        "num_territories": "0"
+    },
+    {
+        "id": "37",
+        "name": "Costa Rica",
+        "region_id": "5",
+        "region": "Latin America & the Caribbean",
+        "num_territories": "0"
+    },
+    {
+        "id": "40",
+        "name": "Dominica",
+        "region_id": "5",
+        "region": "Latin America & the Caribbean",
+        "num_territories": "0"
+    },
+    {
+        "id": "41",
+        "name": "Dominican Republic",
+        "region_id": "5",
+        "region": "Latin America & the Caribbean",
+        "num_territories": "0"
+    },
+    {
+        "id": "42",
+        "name": "Ecuador",
+        "region_id": "5",
+        "region": "Latin America & the Caribbean",
+        "num_territories": "0"
+    },
+    {
+        "id": "44",
+        "name": "El Salvador",
+        "region_id": "5",
+        "region": "Latin America & the Caribbean",
+        "num_territories": "0"
+    },
+    {
+        "id": "53",
+        "name": "Grenada",
+        "region_id": "5",
+        "region": "Latin America & the Caribbean",
+        "num_territories": "0"
+    },
+    {
+        "id": "54",
+        "name": "Guatemala",
+        "region_id": "5",
+        "region": "Latin America & the Caribbean",
+        "num_territories": "0"
+    },
+    {
+        "id": "57",
+        "name": "Guyana",
+        "region_id": "5",
+        "region": "Latin America & the Caribbean",
+        "num_territories": "0"
+    },
+    {
+        "id": "58",
+        "name": "Haiti",
+        "region_id": "5",
+        "region": "Latin America & the Caribbean",
+        "num_territories": "0"
+    },
+    {
+        "id": "60",
+        "name": "Honduras",
+        "region_id": "5",
+        "region": "Latin America & the Caribbean",
+        "num_territories": "0"
+    },
+    {
+        "id": "65",
+        "name": "Jamaica",
+        "region_id": "5",
+        "region": "Latin America & the Caribbean",
+        "num_territories": "0"
+    },
+    {
+        "id": "83",
+        "name": "Mexico",
+        "region_id": "5",
+        "region": "Latin America & the Caribbean",
+        "num_territories": "0"
+    },
+    {
+        "id": "92",
+        "name": "Nicaragua",
+        "region_id": "5",
+        "region": "Latin America & the Caribbean",
+        "num_territories": "0"
+    },
+    {
+        "id": "100",
+        "name": "Panama",
+        "region_id": "5",
+        "region": "Latin America & the Caribbean",
+        "num_territories": "0"
+    },
+    {
+        "id": "102",
+        "name": "Paraguay",
+        "region_id": "5",
+        "region": "Latin America & the Caribbean",
+        "num_territories": "0"
+    },
+    {
+        "id": "103",
+        "name": "Peru",
+        "region_id": "5",
+        "region": "Latin America & the Caribbean",
+        "num_territories": "0"
+    },
+    {
+        "id": "109",
+        "name": "Saint Lucia",
+        "region_id": "5",
+        "region": "Latin America & the Caribbean",
+        "num_territories": "0"
+    },
+    {
+        "id": "110",
+        "name": "Saint Vincent and the Grenadines",
+        "region_id": "5",
+        "region": "Latin America & the Caribbean",
+        "num_territories": "0"
+    },
+    {
+        "id": "123",
+        "name": "Suriname",
+        "region_id": "5",
+        "region": "Latin America & the Caribbean",
+        "num_territories": "0"
+    },
+    {
+        "id": "138",
+        "name": "Uruguay",
+        "region_id": "5",
+        "region": "Latin America & the Caribbean",
+        "num_territories": "0"
+    },
+    {
+        "id": "141",
+        "name": "Venezuela",
+        "region_id": "5",
+        "region": "Latin America & the Caribbean",
+        "num_territories": "0"
+    }
+]
