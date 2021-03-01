@@ -7,11 +7,11 @@
 
 import Foundation
 
-class SweatAndToil {    
+class SweatAndToilAPI {    
     static var TOKEN = "d75e5b99-5807-49a1-a7b0-b22aa56fab5f"
     static var DOMAIN_URL = "https://data.dol.gov/get/"
     
-    static func fetchRegions(completionHandler: @escaping ([Region]) -> Void) {
+    static func fetchRegions(completionHandler: @escaping ([RegionAPI]) -> Void) {
         let ext = "SweatToilAllRegions"
         let url = URL(string: generateURL(url: DOMAIN_URL, ext: ext, token: TOKEN, limit: "200"))!
         
@@ -33,14 +33,14 @@ class SweatAndToil {
           }
 
           if let data = data,
-            let regions: [Region] = try? JSONDecoder().decode([Region].self, from: data) {
+            let regions: [RegionAPI] = try? JSONDecoder().decode([RegionAPI].self, from: data) {
             completionHandler(regions)
           }
         })
         task.resume()
     }
     
-    static func fetchCountries(completionHandler: @escaping ([Country]) -> Void) {
+    static func fetchCountries(completionHandler: @escaping ([CountryAPI]) -> Void) {
         let ext = "SweatToilAllCountries"
         let url = URL(string: generateURL(url: DOMAIN_URL, ext: ext, token: TOKEN, limit: "200"))!
         
@@ -62,14 +62,14 @@ class SweatAndToil {
           }
 
           if let data = data,
-            let countries: [Country] = try? JSONDecoder().decode([Country].self, from: data) {
+            let countries: [CountryAPI] = try? JSONDecoder().decode([CountryAPI].self, from: data) {
             completionHandler(countries)
           }
         })
         task.resume()
     }
     
-    static func fetchTerritories(completionHandler: @escaping ([Territory]) -> Void) {
+    static func fetchTerritories(completionHandler: @escaping ([TerritoryAPI]) -> Void) {
         let ext = "SweatToilAllTerritories"
         let url = URL(string: generateURL(url: DOMAIN_URL, ext: ext, token: TOKEN, limit: "200"))!
         
@@ -91,14 +91,14 @@ class SweatAndToil {
           }
 
           if let data = data,
-            let territories: [Territory] = try? JSONDecoder().decode([Territory].self, from: data) {
+            let territories: [TerritoryAPI] = try? JSONDecoder().decode([TerritoryAPI].self, from: data) {
             completionHandler(territories)
           }
         })
         task.resume()
     }
     
-    static func fetchAdvancementLevels(completionHandler: @escaping ([AdvancementLevel]) -> Void) {
+    static func fetchAdvancementLevels(completionHandler: @escaping ([AdvancementLevelAPI]) -> Void) {
         let ext = "SweatToilAllAdvancementLevels"
         let url = URL(string: generateURL(url: DOMAIN_URL, ext: ext, token: TOKEN, limit: "200"))!
         
@@ -120,14 +120,14 @@ class SweatAndToil {
           }
 
           if let data = data,
-            let advancementLevels: [AdvancementLevel] = try? JSONDecoder().decode([AdvancementLevel].self, from: data) {
+            let advancementLevels: [AdvancementLevelAPI] = try? JSONDecoder().decode([AdvancementLevelAPI].self, from: data) {
             completionHandler(advancementLevels)
           }
         })
         task.resume()
     }
     
-    static func fetchAssessments(completionHandler: @escaping ([Assessment]) -> Void) {
+    static func fetchAssessments(completionHandler: @escaping ([AssessmentAPI]) -> Void) {
         let ext = "SweatToilAllAssessments"
         let url = URL(string: generateURL(url: DOMAIN_URL, ext: ext, token: TOKEN, limit: "200"))!
         
@@ -149,14 +149,14 @@ class SweatAndToil {
           }
 
           if let data = data,
-            let assessments: [Assessment] = try? JSONDecoder().decode([Assessment].self, from: data) {
+            let assessments: [AssessmentAPI] = try? JSONDecoder().decode([AssessmentAPI].self, from: data) {
             completionHandler(assessments)
           }
         })
         task.resume()
     }
     
-    static func fetchSectors(completionHandler: @escaping ([Sector]) -> Void) {
+    static func fetchSectors(completionHandler: @escaping ([SectorAPI]) -> Void) {
         let ext = "SweatToilAllSectors"
         let url = URL(string: generateURL(url: DOMAIN_URL, ext: ext, token: TOKEN, limit: "200"))!
         
@@ -178,14 +178,14 @@ class SweatAndToil {
           }
 
           if let data = data,
-            let sectors: [Sector] = try? JSONDecoder().decode([Sector].self, from: data) {
+            let sectors: [SectorAPI] = try? JSONDecoder().decode([SectorAPI].self, from: data) {
             completionHandler(sectors)
           }
         })
         task.resume()
     }
     
-    static func fetchGoods(completionHandler: @escaping ([Good]) -> Void) {
+    static func fetchGoods(completionHandler: @escaping ([GoodAPI]) -> Void) {
         let ext = "SweatToilAllGoods"
         let url = URL(string: generateURL(url: DOMAIN_URL, ext: ext, token: TOKEN, limit: "200"))!
         
@@ -207,14 +207,14 @@ class SweatAndToil {
           }
 
           if let data = data,
-            let goods: [Good] = try? JSONDecoder().decode([Good].self, from: data) {
+            let goods: [GoodAPI] = try? JSONDecoder().decode([GoodAPI].self, from: data) {
             completionHandler(goods)
           }
         })
         task.resume()
     }
     
-    static func fetchCountryGoods(completionHandler: @escaping ([CountryGood]) -> Void) {
+    static func fetchCountryGoods(completionHandler: @escaping ([CountryGoodAPI]) -> Void) {
         let ext = "SweatToilAllCountryGoods"
         let url = URL(string: generateURL(url: DOMAIN_URL, ext: ext, token: TOKEN, limit: "200"))!
         print(url.absoluteURL)
@@ -241,7 +241,7 @@ class SweatAndToil {
         }
 
           if let data = data,
-            let countryGoods: [CountryGood] = try? JSONDecoder().decode([CountryGood].self, from: data) {
+            let countryGoods: [CountryGoodAPI] = try? JSONDecoder().decode([CountryGoodAPI].self, from: data) {
             completionHandler(countryGoods)
           } else {
             print("No Data")
@@ -252,7 +252,7 @@ class SweatAndToil {
         print("Ending function")
     }
     
-    static func fetchSuggestedActions(completionHandler: @escaping ([SuggestedAction]) -> Void) {
+    static func fetchSuggestedActions(completionHandler: @escaping ([SuggestedActionAPI]) -> Void) {
         let ext = "SweatToilAllSuggestedActions"
         let url = URL(string: generateURL(url: DOMAIN_URL, ext: ext, token: TOKEN, limit: "200"))!
         
@@ -274,14 +274,14 @@ class SweatAndToil {
           }
 
           if let data = data,
-            let suggestedActions: [SuggestedAction] = try? JSONDecoder().decode([SuggestedAction].self, from: data) {
+            let suggestedActions: [SuggestedActionAPI] = try? JSONDecoder().decode([SuggestedActionAPI].self, from: data) {
             completionHandler(suggestedActions)
           }
         })
         task.resume()
     }
     
-    static func fetchLegalStandards(completionHandler: @escaping ([LegalStandard]) -> Void) {
+    static func fetchLegalStandards(completionHandler: @escaping ([LegalStandardAPI]) -> Void) {
         let ext = "SweatToilAllLegalStandards"
         let url = URL(string: generateURL(url: DOMAIN_URL, ext: ext, token: TOKEN, limit: "200"))!
         
@@ -303,14 +303,14 @@ class SweatAndToil {
           }
 
           if let data = data,
-            let legalStandards: [LegalStandard] = try? JSONDecoder().decode([LegalStandard].self, from: data) {
+            let legalStandards: [LegalStandardAPI] = try? JSONDecoder().decode([LegalStandardAPI].self, from: data) {
             completionHandler(legalStandards)
           }
         })
         task.resume()
     }
     
-    static func fetchEnforcements(completionHandler: @escaping ([Enforcement]) -> Void) {
+    static func fetchEnforcements(completionHandler: @escaping ([EnforcementAPI]) -> Void) {
         let ext = "SweatToilAllEnforcements"
         let url = URL(string: generateURL(url: DOMAIN_URL, ext: ext, token: TOKEN, limit: "200"))!
         
@@ -332,14 +332,14 @@ class SweatAndToil {
           }
 
           if let data = data,
-            let enforcements: [Enforcement] = try? JSONDecoder().decode([Enforcement].self, from: data) {
+            let enforcements: [EnforcementAPI] = try? JSONDecoder().decode([EnforcementAPI].self, from: data) {
             completionHandler(enforcements)
           }
         })
         task.resume()
     }
     
-    static func fetchMechanisms(completionHandler: @escaping ([Mechanism]) -> Void) {
+    static func fetchMechanisms(completionHandler: @escaping ([MechanismAPI]) -> Void) {
         let ext = "SweatToilMechanisms"
         let url = URL(string: generateURL(url: DOMAIN_URL, ext: ext, token: TOKEN, limit: "200"))!
         
@@ -361,7 +361,7 @@ class SweatAndToil {
           }
 
           if let data = data,
-            let mechanisms: [Mechanism] = try? JSONDecoder().decode([Mechanism].self, from: data) {
+            let mechanisms: [MechanismAPI] = try? JSONDecoder().decode([MechanismAPI].self, from: data) {
             completionHandler(mechanisms)
           }
         })
