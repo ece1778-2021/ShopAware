@@ -6,3 +6,15 @@
 //
 
 import Foundation
+import SwiftUI
+import Combine
+
+struct ListItem: Identifiable {
+    var id = String()
+    var itemName = String()
+    // Add other features later
+}
+
+class ListItemStore : ObservableObject {
+    @Published var shoppingListItems = [ListItem]()
+}

@@ -260,6 +260,23 @@ PODS:
     - GTMSessionFetcher/Core (~> 1.4)
   - GoogleDataTransport (8.2.0):
     - nanopb (~> 2.30907.0)
+  - GoogleMLKit/BarcodeScanning (2.0.0):
+    - GoogleMLKit/MLKitCore
+    - MLKitBarcodeScanning (~> 1.1.0)
+  - GoogleMLKit/MLKitCore (2.0.0):
+    - MLKitCommon (~> 2.0.0)
+  - GoogleToolboxForMac/DebugUtils (2.3.1):
+    - GoogleToolboxForMac/Defines (= 2.3.1)
+  - GoogleToolboxForMac/Defines (2.3.1)
+  - GoogleToolboxForMac/Logger (2.3.1):
+    - GoogleToolboxForMac/Defines (= 2.3.1)
+  - "GoogleToolboxForMac/NSData+zlib (2.3.1)":
+    - GoogleToolboxForMac/Defines (= 2.3.1)
+  - "GoogleToolboxForMac/NSDictionary+URLArguments (2.3.1)":
+    - GoogleToolboxForMac/DebugUtils (= 2.3.1)
+    - GoogleToolboxForMac/Defines (= 2.3.1)
+    - "GoogleToolboxForMac/NSString+URLArguments (= 2.3.1)"
+  - "GoogleToolboxForMac/NSString+URLArguments (2.3.1)"
   - GoogleUtilities/AppDelegateSwizzler (7.2.0):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
@@ -274,6 +291,10 @@ PODS:
     - GoogleUtilities/Reachability
   - "GoogleUtilities/NSData+zlib (7.2.0)"
   - GoogleUtilities/Reachability (7.2.0):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/UserDefaults (7.2.0):
+    - GoogleUtilities/Logger
+  - GoogleUtilitiesComponents (1.0.0):
     - GoogleUtilities/Logger
   - "gRPC-C++ (1.28.2)":
     - "gRPC-C++/Implementation (= 1.28.2)"
@@ -301,12 +322,31 @@ PODS:
   - gRPC-Core/Interface (1.28.2)
   - GTMSessionFetcher/Core (1.5.0)
   - leveldb-library (1.22)
+  - MLKitBarcodeScanning (1.1.0):
+    - MLKitCommon (~> 2.0)
+    - MLKitVision (~> 1.1)
+  - MLKitCommon (2.0.0):
+    - GoogleDataTransport (~> 8.0)
+    - GoogleToolboxForMac/Logger (~> 2.1)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+    - "GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)"
+    - GoogleUtilities/UserDefaults (~> 7.0)
+    - GoogleUtilitiesComponents (~> 1.0)
+    - GTMSessionFetcher/Core (~> 1.1)
+    - Protobuf (~> 3.12)
+  - MLKitVision (1.1.0):
+    - GoogleToolboxForMac/Logger (~> 2.1)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+    - GTMSessionFetcher/Core (~> 1.1)
+    - MLKitCommon (~> 2.0)
+    - Protobuf (~> 3.12)
   - nanopb (2.30907.0):
     - nanopb/decode (= 2.30907.0)
     - nanopb/encode (= 2.30907.0)
   - nanopb/decode (2.30907.0)
   - nanopb/encode (2.30907.0)
   - PromisesObjC (1.2.12)
+  - Protobuf (3.14.0)
   - SDWebImage (5.10.3):
     - SDWebImage/Core (= 5.10.3)
   - SDWebImage/Core (5.10.3)
@@ -336,6 +376,7 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Firestore
   - Firebase/Storage
+  - GoogleMLKit/BarcodeScanning
   - SDWebImageSwiftUI
   - URLImage
 
@@ -350,13 +391,20 @@ SPEC REPOS:
     - FirebaseFirestore
     - FirebaseStorage
     - GoogleDataTransport
+    - GoogleMLKit
+    - GoogleToolboxForMac
     - GoogleUtilities
+    - GoogleUtilitiesComponents
     - "gRPC-C++"
     - gRPC-Core
     - GTMSessionFetcher
     - leveldb-library
+    - MLKitBarcodeScanning
+    - MLKitCommon
+    - MLKitVision
     - nanopb
     - PromisesObjC
+    - Protobuf
     - SDWebImage
     - SDWebImageSwiftUI
     - URLImage
@@ -371,17 +419,24 @@ SPEC CHECKSUMS:
   FirebaseFirestore: ab4e4d98aea35b4af696a96554769903123f83cc
   FirebaseStorage: e8726dfe21ebe068ccbe8e9c332ea90688eeadae
   GoogleDataTransport: 1024b1a4dfbd7a0e92cb20d7e0a6f1fb66b449a4
+  GoogleMLKit: 2a9032170872c4464d516700a04661d6e5b98a77
+  GoogleToolboxForMac: 471e0c05d39506e50e6398f46fa9a12ae0efeff9
   GoogleUtilities: d866834472f1324d080496bc67ab3ce5d0d46027
+  GoogleUtilitiesComponents: a69c0b3b369ba443e988141e75ef49d9010b1c80
   "gRPC-C++": 13d8ccef97d5c3c441b7e3c529ef28ebee86fad2
   gRPC-Core: 4afa11bfbedf7cdecd04de535a9e046893404ed5
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
+  MLKitBarcodeScanning: 90cd00f13f3b16cb69f9cd98d9d94adf9b5691e6
+  MLKitCommon: 746a9b06e05a6a5dc9636a8ea376c3145f0a5338
+  MLKitVision: d8152c0ecdefb17ab680be0457f90ce9f3544f43
   nanopb: 59221d7f958fb711001e6a449489542d92ae113e
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
+  Protobuf: 0cde852566359049847168e51bd1c690e0f70056
   SDWebImage: e378178472b735e84b007bfb55514c97948a0598
   SDWebImageSwiftUI: 43687ffe232ddd33fe0659498b7ca9884fdd6b35
   URLImage: d58d7fa82e466c7576f2aea4f2113251a7a38ee9
 
-PODFILE CHECKSUM: 1867a001f658e3b59032292ccc4980b05199a596
+PODFILE CHECKSUM: e704cbaa486697d1363f2baf87b9a92e0538fcf7
 
 COCOAPODS: 1.10.1

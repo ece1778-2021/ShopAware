@@ -12,5 +12,10 @@ pod 'Firebase/Storage'
 pod 'Firebase/Firestore'
 pod 'URLImage' 
 pod 'SDWebImageSwiftUI'
+pod 'GoogleMLKit/BarcodeScanning'
+#pod 'Firebase/Core'
+#pod 'Firebase/MLVision'
+#pod 'Firebase/MLVisionLabelModel'
+#pod 'Firebase/MLVisionBarcodeModel'
 
 end
