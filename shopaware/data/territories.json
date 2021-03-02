@@ -1,0 +1,135 @@
+[
+    {
+        "id": "1",
+        "name": "Mainland",
+        "abbreviation": "",
+        "country_id": "126",
+        "country": "Tanzania"
+    },
+    {
+        "id": "2",
+        "name": "Zanzibar",
+        "abbreviation": "",
+        "country_id": "126",
+        "country": "Tanzania"
+    },
+    {
+        "id": "3",
+        "name": "Federation of Bosnia and Herzegovina",
+        "abbreviation": "FBiH",
+        "country_id": "15",
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "id": "4",
+        "name": "Republika Srpska",
+        "abbreviation": "RS",
+        "country_id": "15",
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "id": "5",
+        "name": "Br\u00c4\u008dko District",
+        "abbreviation": "BD",
+        "country_id": "15",
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "id": "6",
+        "name": "Bosnia and Herzegovina",
+        "abbreviation": "BiH",
+        "country_id": "15",
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "id": "7",
+        "name": "Iraq",
+        "abbreviation": "",
+        "country_id": "64",
+        "country": "Iraq"
+    },
+    {
+        "id": "8",
+        "name": "Kurdistan Region",
+        "abbreviation": "",
+        "country_id": "64",
+        "country": "Iraq"
+    },
+    {
+        "id": "9",
+        "name": "Federal",
+        "abbreviation": "",
+        "country_id": "99",
+        "country": "Pakistan"
+    },
+    {
+        "id": "10",
+        "name": "Punjab",
+        "abbreviation": "",
+        "country_id": "99",
+        "country": "Pakistan"
+    },
+    {
+        "id": "11",
+        "name": "Khyber Pakhtunkhwa",
+        "abbreviation": "KP",
+        "country_id": "99",
+        "country": "Pakistan"
+    },
+    {
+        "id": "12",
+        "name": "Sindh",
+        "abbreviation": "",
+        "country_id": "99",
+        "country": "Pakistan"
+    },
+    {
+        "id": "13",
+        "name": "Balochistan",
+        "abbreviation": "",
+        "country_id": "99",
+        "country": "Pakistan"
+    },
+    {
+        "id": "14",
+        "name": "Federal",
+        "abbreviation": "",
+        "country_id": "118",
+        "country": "Somalia"
+    },
+    {
+        "id": "15",
+        "name": "Puntland",
+        "abbreviation": "",
+        "country_id": "118",
+        "country": "Somalia"
+    },
+    {
+        "id": "16",
+        "name": "Somaliland",
+        "abbreviation": "",
+        "country_id": "118",
+        "country": "Somalia"
+    },
+    {
+        "id": "17",
+        "name": "All Tanzania",
+        "abbreviation": "",
+        "country_id": "126",
+        "country": "Tanzania"
+    },
+    {
+        "id": "18",
+        "name": "All Territories",
+        "abbreviation": "",
+        "country_id": "118",
+        "country": "Somalia"
+    },
+    {
+        "id": "19",
+        "name": "All Territories",
+        "abbreviation": "",
+        "country_id": "64",
+        "country": "Iraq"
+    }
+]

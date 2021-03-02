@@ -1,0 +1,78 @@
+[
+    {
+        "id": "1",
+        "name": "No Assessment"
+    },
+    {
+        "id": "2",
+        "name": "Moderate Advancement"
+    },
+    {
+        "id": "3",
+        "name": "Significant Advancement"
+    },
+    {
+        "id": "4",
+        "name": "Minimal Advancement"
+    },
+    {
+        "id": "5",
+        "name": "Minimal Advancement \u00e2\u0080\u0093 Efforts Made but Continued Law that Delayed Advancement"
+    },
+    {
+        "id": "6",
+        "name": "Minimal Advancement\u00e2\u0080\u0093 Efforts Made but Continued Law that Delayed Advancement"
+    },
+    {
+        "id": "7",
+        "name": "No Advancement"
+    },
+    {
+        "id": "8",
+        "name": "Minimal Advancement \u00e2\u0080\u0093 Efforts Made but Continued Practice that Delayed Advancement"
+    },
+    {
+        "id": "9",
+        "name": "No Advancement \u00e2\u0080\u0093 Efforts Made but Complicit in Forced Child Labor"
+    },
+    {
+        "id": "10",
+        "name": "Minimal Advancement \u00e2\u0080\u0093 Efforts Made but Regression in Policy that Delayed Advancement"
+    },
+    {
+        "id": "11",
+        "name": "Minimal Advancement \u00e2\u0080\u0093 Efforts Made but Regression in Practice that Delayed Advancement"
+    },
+    {
+        "id": "12",
+        "name": "No Advancement - Efforts Made But Complicit"
+    },
+    {
+        "id": "13",
+        "name": "No Advancement \u00e2\u0080\u0093 No Efforts and Complicit in Forced Child Labor"
+    },
+    {
+        "id": "14",
+        "name": "Minimal Advancement \u00e2\u0080\u0093 Efforts Made but Continued Policy that Delayed Advancement"
+    },
+    {
+        "id": "15",
+        "name": "Minimal Advancement \u00e2\u0080\u0093 Efforts Made but Regression in Law that Delayed Advancement"
+    },
+    {
+        "id": "16",
+        "name": "Minimal Advancement \u00e2\u0080\u0093 Efforts Made but Continued Law, Policy, and Practice that Delayed Advancement"
+    },
+    {
+        "id": "17",
+        "name": "Minimal Advancement \u00e2\u0080\u0093 Efforts Made but Continued Policy and Practice that Delayed Advancement"
+    },
+    {
+        "id": "18",
+        "name": "Minimal Advancement \u00e2\u0080\u0093 Efforts Made but Regression in Practice and Continued Policy that Delayed Advancement"
+    },
+    {
+        "id": "19",
+        "name": "Minimal Advancement \u00e2\u0080\u0093 Efforts Made but Continued Practices that Delayed Advancement"
+    }
+]
