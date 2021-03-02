@@ -11,12 +11,14 @@ struct Territory: Codable {
     public var id: String
     public var name: String
     public var abbreviation: String
-    public var country: Country
+    public var country_id: String
+    public var country: String
     
-    init(id: String, name: String, abbreviation: String, country: Country) {
+    init(id: String, name: String, abbreviation: String, country_id: String, country: String) {
         self.id = id
         self.name = name
         self.abbreviation = abbreviation
+        self.country_id = country_id
         self.country = country
     }
     

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct LegalStandardAPI: Codable {
+struct LegalStandard: Codable {
     public var id: String
     public var assessment_id: String
     public var year: String
