@@ -17,6 +17,15 @@ class SweatAndToil {
     var goods: [Good] = []
     var countryGoods: [CountryGood] = []
     
+    func get_assessments_by_country(country: String) -> [Assessment] {
+        return assessments.filter{$0.country.name == country}
+    }
+    
+    func get_countryGoods_by_good(good: String) -> [CountryGood] {
+        return countryGoods.filter{$0.good.name == good}
+        
+    }
+    
     func get_goods_by_name() -> [String] {
         return goods.map{ $0.name }
     }
