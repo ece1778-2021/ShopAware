@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5559DF8AC1F7F449782D5525 /* Pods_shopaware.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55BB016AE16B053F22EB508C /* Pods_shopaware.framework */; };
+		219E44BA93C7B6EB936BED63 /* Pods_shopaware.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D036281CF8F777C62931987 /* Pods_shopaware.framework */; };
+		96F18FF825EED23500CC73D1 /* network in Resources */ = {isa = PBXBuildFile; fileRef = 96F18FF525EED23500CC73D1 /* network */; };
+		96F18FF925EED23500CC73D1 /* data in Resources */ = {isa = PBXBuildFile; fileRef = 96F18FF625EED23500CC73D1 /* data */; };
+		96F18FFA25EED23500CC73D1 /* models in Resources */ = {isa = PBXBuildFile; fileRef = 96F18FF725EED23500CC73D1 /* models */; };
 		E97D460425EB244700AE47B0 /* shopawareApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97D460325EB244700AE47B0 /* shopawareApp.swift */; };
 		E97D460625EB244700AE47B0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97D460525EB244700AE47B0 /* ContentView.swift */; };
 		E97D460825EB244900AE47B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E97D460725EB244900AE47B0 /* Assets.xcassets */; };
@@ -19,9 +22,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		189A8A9175387C7CC3F585A4 /* Pods-shopaware.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shopaware.release.xcconfig"; path = "Target Support Files/Pods-shopaware/Pods-shopaware.release.xcconfig"; sourceTree = "<group>"; };
-		55BB016AE16B053F22EB508C /* Pods_shopaware.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_shopaware.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		65ED9E9322936BA7C69B629D /* Pods-shopaware.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shopaware.debug.xcconfig"; path = "Target Support Files/Pods-shopaware/Pods-shopaware.debug.xcconfig"; sourceTree = "<group>"; };
+		1B4B37626208E965AE0BCAE5 /* Pods-shopaware.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shopaware.release.xcconfig"; path = "Target Support Files/Pods-shopaware/Pods-shopaware.release.xcconfig"; sourceTree = "<group>"; };
+		3D036281CF8F777C62931987 /* Pods_shopaware.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_shopaware.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EE959294008C3125E9CB745 /* Pods-shopaware.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shopaware.debug.xcconfig"; path = "Target Support Files/Pods-shopaware/Pods-shopaware.debug.xcconfig"; sourceTree = "<group>"; };
+		96F18FF525EED23500CC73D1 /* network */ = {isa = PBXFileReference; lastKnownFileType = folder; path = network; sourceTree = "<group>"; };
+		96F18FF625EED23500CC73D1 /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = data; sourceTree = "<group>"; };
+		96F18FF725EED23500CC73D1 /* models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = models; sourceTree = "<group>"; };
 		E97D460025EB244700AE47B0 /* shopaware.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shopaware.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E97D460325EB244700AE47B0 /* shopawareApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shopawareApp.swift; sourceTree = "<group>"; };
 		E97D460525EB244700AE47B0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -39,17 +45,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5559DF8AC1F7F449782D5525 /* Pods_shopaware.framework in Frameworks */,
+				219E44BA93C7B6EB936BED63 /* Pods_shopaware.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9454A27CEEE008E036F8DDB1 /* Frameworks */ = {
+		CE2D295D0D56DF8840717CDA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				55BB016AE16B053F22EB508C /* Pods_shopaware.framework */,
+				3D036281CF8F777C62931987 /* Pods_shopaware.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -57,8 +63,8 @@
 		D3BD80D049A8BA78540CC465 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				65ED9E9322936BA7C69B629D /* Pods-shopaware.debug.xcconfig */,
-				189A8A9175387C7CC3F585A4 /* Pods-shopaware.release.xcconfig */,
+				5EE959294008C3125E9CB745 /* Pods-shopaware.debug.xcconfig */,
+				1B4B37626208E965AE0BCAE5 /* Pods-shopaware.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -69,7 +75,7 @@
 				E97D460225EB244700AE47B0 /* shopaware */,
 				E97D460125EB244700AE47B0 /* Products */,
 				D3BD80D049A8BA78540CC465 /* Pods */,
-				9454A27CEEE008E036F8DDB1 /* Frameworks */,
+				CE2D295D0D56DF8840717CDA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,6 +90,9 @@
 		E97D460225EB244700AE47B0 /* shopaware */ = {
 			isa = PBXGroup;
 			children = (
+				96F18FF625EED23500CC73D1 /* data */,
+				96F18FF725EED23500CC73D1 /* models */,
+				96F18FF525EED23500CC73D1 /* network */,
 				E9814F9625ED675F0050AB35 /* DataStore.swift */,
 				E9814FFA25EDC3EB0050AB35 /* Book.swift */,
 				E9814FFD25EDC4B10050AB35 /* BookSearchManager.swift */,
@@ -112,11 +121,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E97D460F25EB244900AE47B0 /* Build configuration list for PBXNativeTarget "shopaware" */;
 			buildPhases = (
-				86AA4ADAE651A575DF1411AC /* [CP] Check Pods Manifest.lock */,
+				0FFD9F4CE1217371B6BFF32D /* [CP] Check Pods Manifest.lock */,
 				E97D45FC25EB244700AE47B0 /* Sources */,
 				E97D45FD25EB244700AE47B0 /* Frameworks */,
 				E97D45FE25EB244700AE47B0 /* Resources */,
-				CA0C6CD0823CBC14EFAD56EE /* [CP] Embed Pods Frameworks */,
+				F8D27171EB2FBCCE3DEB5B76 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -164,7 +173,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96F18FFA25EED23500CC73D1 /* models in Resources */,
+				96F18FF825EED23500CC73D1 /* network in Resources */,
 				E97D460B25EB244900AE47B0 /* Preview Assets.xcassets in Resources */,
+				96F18FF925EED23500CC73D1 /* data in Resources */,
 				E97D460825EB244900AE47B0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -172,7 +184,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		86AA4ADAE651A575DF1411AC /* [CP] Check Pods Manifest.lock */ = {
+		0FFD9F4CE1217371B6BFF32D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -194,7 +206,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CA0C6CD0823CBC14EFAD56EE /* [CP] Embed Pods Frameworks */ = {
+		F8D27171EB2FBCCE3DEB5B76 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -348,13 +360,13 @@
 		};
 		E97D461025EB244900AE47B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 65ED9E9322936BA7C69B629D /* Pods-shopaware.debug.xcconfig */;
+			baseConfigurationReference = 5EE959294008C3125E9CB745 /* Pods-shopaware.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"shopaware/Preview Content\"";
-				DEVELOPMENT_TEAM = K287H78N9T;
+				DEVELOPMENT_TEAM = RV923KLYR7;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = shopaware/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -371,13 +383,13 @@
 		};
 		E97D461125EB244900AE47B0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 189A8A9175387C7CC3F585A4 /* Pods-shopaware.release.xcconfig */;
+			baseConfigurationReference = 1B4B37626208E965AE0BCAE5 /* Pods-shopaware.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"shopaware/Preview Content\"";
-				DEVELOPMENT_TEAM = K287H78N9T;
+				DEVELOPMENT_TEAM = RV923KLYR7;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = shopaware/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
