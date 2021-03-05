@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,14 +11,13 @@
 		96F18FF825EED23500CC73D1 /* network in Resources */ = {isa = PBXBuildFile; fileRef = 96F18FF525EED23500CC73D1 /* network */; };
 		96F18FF925EED23500CC73D1 /* data in Resources */ = {isa = PBXBuildFile; fileRef = 96F18FF625EED23500CC73D1 /* data */; };
 		96F18FFA25EED23500CC73D1 /* models in Resources */ = {isa = PBXBuildFile; fileRef = 96F18FF725EED23500CC73D1 /* models */; };
+		E9422D4025F2000A00DF7EDD /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = E9422D3F25F2000A00DF7EDD /* CodeScanner */; };
 		E97D460425EB244700AE47B0 /* shopawareApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97D460325EB244700AE47B0 /* shopawareApp.swift */; };
 		E97D460625EB244700AE47B0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97D460525EB244700AE47B0 /* ContentView.swift */; };
 		E97D460825EB244900AE47B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E97D460725EB244900AE47B0 /* Assets.xcassets */; };
 		E97D460B25EB244900AE47B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E97D460A25EB244900AE47B0 /* Preview Assets.xcassets */; };
 		E9814F9725ED675F0050AB35 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9814F9625ED675F0050AB35 /* DataStore.swift */; };
-		E9814FFB25EDC3EB0050AB35 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9814FFA25EDC3EB0050AB35 /* Book.swift */; };
-		E9814FFE25EDC4B10050AB35 /* BookSearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9814FFD25EDC4B10050AB35 /* BookSearchManager.swift */; };
-		E981500125EE0CF20050AB35 /* BarcodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E981500025EE0CF20050AB35 /* BarcodeScanner.swift */; };
+		E981502425F1C46D0050AB35 /* CarBode in Frameworks */ = {isa = PBXBuildFile; productRef = E981502325F1C46D0050AB35 /* CarBode */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,9 +34,6 @@
 		E97D460A25EB244900AE47B0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E97D460C25EB244900AE47B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9814F9625ED675F0050AB35 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
-		E9814FFA25EDC3EB0050AB35 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
-		E9814FFD25EDC4B10050AB35 /* BookSearchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchManager.swift; sourceTree = "<group>"; };
-		E981500025EE0CF20050AB35 /* BarcodeScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScanner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +42,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				219E44BA93C7B6EB936BED63 /* Pods_shopaware.framework in Frameworks */,
+				E981502425F1C46D0050AB35 /* CarBode in Frameworks */,
+				E9422D4025F2000A00DF7EDD /* CodeScanner in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,9 +92,6 @@
 				96F18FF725EED23500CC73D1 /* models */,
 				96F18FF525EED23500CC73D1 /* network */,
 				E9814F9625ED675F0050AB35 /* DataStore.swift */,
-				E9814FFA25EDC3EB0050AB35 /* Book.swift */,
-				E9814FFD25EDC4B10050AB35 /* BookSearchManager.swift */,
-				E981500025EE0CF20050AB35 /* BarcodeScanner.swift */,
 				E97D460325EB244700AE47B0 /* shopawareApp.swift */,
 				E97D460525EB244700AE47B0 /* ContentView.swift */,
 				E97D460725EB244900AE47B0 /* Assets.xcassets */,
@@ -132,6 +127,10 @@
 			dependencies = (
 			);
 			name = shopaware;
+			packageProductDependencies = (
+				E981502325F1C46D0050AB35 /* CarBode */,
+				E9422D3F25F2000A00DF7EDD /* CodeScanner */,
+			);
 			productName = shopaware;
 			productReference = E97D460025EB244700AE47B0 /* shopaware.app */;
 			productType = "com.apple.product-type.application";
@@ -159,6 +158,10 @@
 				Base,
 			);
 			mainGroup = E97D45F725EB244700AE47B0;
+			packageReferences = (
+				E981502225F1C46D0050AB35 /* XCRemoteSwiftPackageReference "CarBode-Barcode-Scanner-For-SwiftUI" */,
+				E9422D3E25F2000A00DF7EDD /* XCRemoteSwiftPackageReference "CodeScanner" */,
+			);
 			productRefGroup = E97D460125EB244700AE47B0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -230,10 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9814FFB25EDC3EB0050AB35 /* Book.swift in Sources */,
-				E9814FFE25EDC4B10050AB35 /* BookSearchManager.swift in Sources */,
 				E97D460625EB244700AE47B0 /* ContentView.swift in Sources */,
-				E981500125EE0CF20050AB35 /* BarcodeScanner.swift in Sources */,
 				E9814F9725ED675F0050AB35 /* DataStore.swift in Sources */,
 				E97D460425EB244700AE47B0 /* shopawareApp.swift in Sources */,
 			);
@@ -366,7 +366,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"shopaware/Preview Content\"";
-				DEVELOPMENT_TEAM = RV923KLYR7;
+				DEVELOPMENT_TEAM = K287H78N9T;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = shopaware/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -389,7 +389,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"shopaware/Preview Content\"";
-				DEVELOPMENT_TEAM = RV923KLYR7;
+				DEVELOPMENT_TEAM = K287H78N9T;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = shopaware/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -426,6 +426,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E9422D3E25F2000A00DF7EDD /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.7;
+			};
+		};
+		E981502225F1C46D0050AB35 /* XCRemoteSwiftPackageReference "CarBode-Barcode-Scanner-For-SwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/heart/CarBode-Barcode-Scanner-For-SwiftUI";
+			requirement = {
+				branch = 2.1.2;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E9422D3F25F2000A00DF7EDD /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9422D3E25F2000A00DF7EDD /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
+		E981502325F1C46D0050AB35 /* CarBode */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E981502225F1C46D0050AB35 /* XCRemoteSwiftPackageReference "CarBode-Barcode-Scanner-For-SwiftUI" */;
+			productName = CarBode;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E97D45F825EB244700AE47B0 /* Project object */;
 }
