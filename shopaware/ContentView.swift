@@ -116,6 +116,10 @@ struct ContentView: View {
                                     //When the scanner found a barcode
                                     print("BarCodeType =",$0.type.rawValue, "Value =",$0.value)
                                     barcode_value = $0.value
+                                    BarcodeApi.fetchProduct(barcode: barcode_value) { (product, brand) in
+                                        print(product)
+                                        print(brand)
+                                    }
                                 }
                                 onDraw: {
                                     print("Preview View Size = \($0.cameraPreviewView.bounds)")

@@ -11,6 +11,7 @@
 		96F18FF825EED23500CC73D1 /* network in Resources */ = {isa = PBXBuildFile; fileRef = 96F18FF525EED23500CC73D1 /* network */; };
 		96F18FF925EED23500CC73D1 /* data in Resources */ = {isa = PBXBuildFile; fileRef = 96F18FF625EED23500CC73D1 /* data */; };
 		96F18FFA25EED23500CC73D1 /* models in Resources */ = {isa = PBXBuildFile; fileRef = 96F18FF725EED23500CC73D1 /* models */; };
+		96F1903525F3290A00CC73D1 /* barcodeApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F1903425F3290A00CC73D1 /* barcodeApi.swift */; };
 		E9422D4025F2000A00DF7EDD /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = E9422D3F25F2000A00DF7EDD /* CodeScanner */; };
 		E97D460425EB244700AE47B0 /* shopawareApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97D460325EB244700AE47B0 /* shopawareApp.swift */; };
 		E97D460625EB244700AE47B0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97D460525EB244700AE47B0 /* ContentView.swift */; };
@@ -27,6 +28,7 @@
 		96F18FF525EED23500CC73D1 /* network */ = {isa = PBXFileReference; lastKnownFileType = folder; path = network; sourceTree = "<group>"; };
 		96F18FF625EED23500CC73D1 /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = data; sourceTree = "<group>"; };
 		96F18FF725EED23500CC73D1 /* models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = models; sourceTree = "<group>"; };
+		96F1903425F3290A00CC73D1 /* barcodeApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = barcodeApi.swift; sourceTree = "<group>"; };
 		E97D460025EB244700AE47B0 /* shopaware.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shopaware.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E97D460325EB244700AE47B0 /* shopawareApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shopawareApp.swift; sourceTree = "<group>"; };
 		E97D460525EB244700AE47B0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 		E97D460225EB244700AE47B0 /* shopaware */ = {
 			isa = PBXGroup;
 			children = (
+				96F1903425F3290A00CC73D1 /* barcodeApi.swift */,
 				96F18FF625EED23500CC73D1 /* data */,
 				96F18FF725EED23500CC73D1 /* models */,
 				96F18FF525EED23500CC73D1 /* network */,
@@ -234,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E97D460625EB244700AE47B0 /* ContentView.swift in Sources */,
+				96F1903525F3290A00CC73D1 /* barcodeApi.swift in Sources */,
 				E9814F9725ED675F0050AB35 /* DataStore.swift in Sources */,
 				E97D460425EB244700AE47B0 /* shopawareApp.swift in Sources */,
 			);
