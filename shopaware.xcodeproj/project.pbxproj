@@ -8,9 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		219E44BA93C7B6EB936BED63 /* Pods_shopaware.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D036281CF8F777C62931987 /* Pods_shopaware.framework */; };
+		96BF4E3325F43CFF009B7FF0 /* network in Sources */ = {isa = PBXBuildFile; fileRef = 96F18FF525EED23500CC73D1 /* network */; };
+		96CE3F6125F444B50037E3A4 /* SweatAndToil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F6025F444B50037E3A4 /* SweatAndToil.swift */; };
+		96CE3F6F25F444E60037E3A4 /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F6725F444E60037E3A4 /* Region.swift */; };
+		96CE3F7025F444E60037E3A4 /* Good.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F6825F444E60037E3A4 /* Good.swift */; };
+		96CE3F7125F444E60037E3A4 /* Sector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F6925F444E60037E3A4 /* Sector.swift */; };
+		96CE3F7225F444E60037E3A4 /* Territory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F6A25F444E60037E3A4 /* Territory.swift */; };
+		96CE3F7325F444E60037E3A4 /* Assessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F6B25F444E60037E3A4 /* Assessment.swift */; };
+		96CE3F7425F444E60037E3A4 /* CountryGood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F6C25F444E60037E3A4 /* CountryGood.swift */; };
+		96CE3F7525F444E60037E3A4 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F6D25F444E60037E3A4 /* Country.swift */; };
+		96CE3F7625F444E60037E3A4 /* AdvancementLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F6E25F444E60037E3A4 /* AdvancementLevel.swift */; };
+		96CE3F8425F444F40037E3A4 /* LegalStandardAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F7825F444F30037E3A4 /* LegalStandardAPI.swift */; };
+		96CE3F8525F444F40037E3A4 /* GoodAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F7925F444F30037E3A4 /* GoodAPI.swift */; };
+		96CE3F8625F444F40037E3A4 /* AssessmentAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F7A25F444F30037E3A4 /* AssessmentAPI.swift */; };
+		96CE3F8725F444F40037E3A4 /* EnforcementAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F7B25F444F30037E3A4 /* EnforcementAPI.swift */; };
+		96CE3F8825F444F40037E3A4 /* CountryGoodAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F7C25F444F30037E3A4 /* CountryGoodAPI.swift */; };
+		96CE3F8925F444F40037E3A4 /* MechanismAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F7D25F444F30037E3A4 /* MechanismAPI.swift */; };
+		96CE3F8A25F444F40037E3A4 /* RegionAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F7E25F444F30037E3A4 /* RegionAPI.swift */; };
+		96CE3F8B25F444F40037E3A4 /* SectorAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F7F25F444F30037E3A4 /* SectorAPI.swift */; };
+		96CE3F8C25F444F40037E3A4 /* AdvancementLevelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F8025F444F30037E3A4 /* AdvancementLevelAPI.swift */; };
+		96CE3F8D25F444F40037E3A4 /* TerritoryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F8125F444F30037E3A4 /* TerritoryAPI.swift */; };
+		96CE3F8E25F444F40037E3A4 /* CountryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F8225F444F30037E3A4 /* CountryAPI.swift */; };
+		96CE3F8F25F444F40037E3A4 /* SuggestedActionAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F8325F444F30037E3A4 /* SuggestedActionAPI.swift */; };
 		96F18FF825EED23500CC73D1 /* network in Resources */ = {isa = PBXBuildFile; fileRef = 96F18FF525EED23500CC73D1 /* network */; };
 		96F18FF925EED23500CC73D1 /* data in Resources */ = {isa = PBXBuildFile; fileRef = 96F18FF625EED23500CC73D1 /* data */; };
-		96F18FFA25EED23500CC73D1 /* models in Resources */ = {isa = PBXBuildFile; fileRef = 96F18FF725EED23500CC73D1 /* models */; };
 		E9422D4025F2000A00DF7EDD /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = E9422D3F25F2000A00DF7EDD /* CodeScanner */; };
 		E97D460425EB244700AE47B0 /* shopawareApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97D460325EB244700AE47B0 /* shopawareApp.swift */; };
 		E97D460625EB244700AE47B0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97D460525EB244700AE47B0 /* ContentView.swift */; };
@@ -24,9 +45,29 @@
 		1B4B37626208E965AE0BCAE5 /* Pods-shopaware.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shopaware.release.xcconfig"; path = "Target Support Files/Pods-shopaware/Pods-shopaware.release.xcconfig"; sourceTree = "<group>"; };
 		3D036281CF8F777C62931987 /* Pods_shopaware.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_shopaware.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE959294008C3125E9CB745 /* Pods-shopaware.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shopaware.debug.xcconfig"; path = "Target Support Files/Pods-shopaware/Pods-shopaware.debug.xcconfig"; sourceTree = "<group>"; };
+		96CE3F6025F444B50037E3A4 /* SweatAndToil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SweatAndToil.swift; path = models/SweatAndToil.swift; sourceTree = "<group>"; };
+		96CE3F6725F444E60037E3A4 /* Region.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Region.swift; path = models/Region.swift; sourceTree = "<group>"; };
+		96CE3F6825F444E60037E3A4 /* Good.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Good.swift; path = models/Good.swift; sourceTree = "<group>"; };
+		96CE3F6925F444E60037E3A4 /* Sector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sector.swift; path = models/Sector.swift; sourceTree = "<group>"; };
+		96CE3F6A25F444E60037E3A4 /* Territory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Territory.swift; path = models/Territory.swift; sourceTree = "<group>"; };
+		96CE3F6B25F444E60037E3A4 /* Assessment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Assessment.swift; path = models/Assessment.swift; sourceTree = "<group>"; };
+		96CE3F6C25F444E60037E3A4 /* CountryGood.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CountryGood.swift; path = models/CountryGood.swift; sourceTree = "<group>"; };
+		96CE3F6D25F444E60037E3A4 /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Country.swift; path = models/Country.swift; sourceTree = "<group>"; };
+		96CE3F6E25F444E60037E3A4 /* AdvancementLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdvancementLevel.swift; path = models/AdvancementLevel.swift; sourceTree = "<group>"; };
+		96CE3F7825F444F30037E3A4 /* LegalStandardAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LegalStandardAPI.swift; path = models/modelsAPI/LegalStandardAPI.swift; sourceTree = "<group>"; };
+		96CE3F7925F444F30037E3A4 /* GoodAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoodAPI.swift; path = models/modelsAPI/GoodAPI.swift; sourceTree = "<group>"; };
+		96CE3F7A25F444F30037E3A4 /* AssessmentAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AssessmentAPI.swift; path = models/modelsAPI/AssessmentAPI.swift; sourceTree = "<group>"; };
+		96CE3F7B25F444F30037E3A4 /* EnforcementAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EnforcementAPI.swift; path = models/modelsAPI/EnforcementAPI.swift; sourceTree = "<group>"; };
+		96CE3F7C25F444F30037E3A4 /* CountryGoodAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CountryGoodAPI.swift; path = models/modelsAPI/CountryGoodAPI.swift; sourceTree = "<group>"; };
+		96CE3F7D25F444F30037E3A4 /* MechanismAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MechanismAPI.swift; path = models/modelsAPI/MechanismAPI.swift; sourceTree = "<group>"; };
+		96CE3F7E25F444F30037E3A4 /* RegionAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegionAPI.swift; path = models/modelsAPI/RegionAPI.swift; sourceTree = "<group>"; };
+		96CE3F7F25F444F30037E3A4 /* SectorAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SectorAPI.swift; path = models/modelsAPI/SectorAPI.swift; sourceTree = "<group>"; };
+		96CE3F8025F444F30037E3A4 /* AdvancementLevelAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdvancementLevelAPI.swift; path = models/modelsAPI/AdvancementLevelAPI.swift; sourceTree = "<group>"; };
+		96CE3F8125F444F30037E3A4 /* TerritoryAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TerritoryAPI.swift; path = models/modelsAPI/TerritoryAPI.swift; sourceTree = "<group>"; };
+		96CE3F8225F444F30037E3A4 /* CountryAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CountryAPI.swift; path = models/modelsAPI/CountryAPI.swift; sourceTree = "<group>"; };
+		96CE3F8325F444F30037E3A4 /* SuggestedActionAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SuggestedActionAPI.swift; path = models/modelsAPI/SuggestedActionAPI.swift; sourceTree = "<group>"; };
 		96F18FF525EED23500CC73D1 /* network */ = {isa = PBXFileReference; lastKnownFileType = folder; path = network; sourceTree = "<group>"; };
 		96F18FF625EED23500CC73D1 /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = data; sourceTree = "<group>"; };
-		96F18FF725EED23500CC73D1 /* models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = models; sourceTree = "<group>"; };
 		E97D460025EB244700AE47B0 /* shopaware.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shopaware.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E97D460325EB244700AE47B0 /* shopawareApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shopawareApp.swift; sourceTree = "<group>"; };
 		E97D460525EB244700AE47B0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -88,8 +129,28 @@
 		E97D460225EB244700AE47B0 /* shopaware */ = {
 			isa = PBXGroup;
 			children = (
+				96CE3F8025F444F30037E3A4 /* AdvancementLevelAPI.swift */,
+				96CE3F7A25F444F30037E3A4 /* AssessmentAPI.swift */,
+				96CE3F8225F444F30037E3A4 /* CountryAPI.swift */,
+				96CE3F7C25F444F30037E3A4 /* CountryGoodAPI.swift */,
+				96CE3F7B25F444F30037E3A4 /* EnforcementAPI.swift */,
+				96CE3F7925F444F30037E3A4 /* GoodAPI.swift */,
+				96CE3F7825F444F30037E3A4 /* LegalStandardAPI.swift */,
+				96CE3F7D25F444F30037E3A4 /* MechanismAPI.swift */,
+				96CE3F7E25F444F30037E3A4 /* RegionAPI.swift */,
+				96CE3F7F25F444F30037E3A4 /* SectorAPI.swift */,
+				96CE3F8325F444F30037E3A4 /* SuggestedActionAPI.swift */,
+				96CE3F8125F444F30037E3A4 /* TerritoryAPI.swift */,
+				96CE3F6E25F444E60037E3A4 /* AdvancementLevel.swift */,
+				96CE3F6B25F444E60037E3A4 /* Assessment.swift */,
+				96CE3F6D25F444E60037E3A4 /* Country.swift */,
+				96CE3F6C25F444E60037E3A4 /* CountryGood.swift */,
+				96CE3F6825F444E60037E3A4 /* Good.swift */,
+				96CE3F6725F444E60037E3A4 /* Region.swift */,
+				96CE3F6925F444E60037E3A4 /* Sector.swift */,
+				96CE3F6A25F444E60037E3A4 /* Territory.swift */,
+				96CE3F6025F444B50037E3A4 /* SweatAndToil.swift */,
 				96F18FF625EED23500CC73D1 /* data */,
-				96F18FF725EED23500CC73D1 /* models */,
 				96F18FF525EED23500CC73D1 /* network */,
 				E9814F9625ED675F0050AB35 /* DataStore.swift */,
 				E97D460325EB244700AE47B0 /* shopawareApp.swift */,
@@ -176,7 +237,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96F18FFA25EED23500CC73D1 /* models in Resources */,
 				96F18FF825EED23500CC73D1 /* network in Resources */,
 				E97D460B25EB244900AE47B0 /* Preview Assets.xcassets in Resources */,
 				96F18FF925EED23500CC73D1 /* data in Resources */,
@@ -233,9 +293,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96CE3F7025F444E60037E3A4 /* Good.swift in Sources */,
+				96BF4E3325F43CFF009B7FF0 /* network in Sources */,
+				96CE3F8825F444F40037E3A4 /* CountryGoodAPI.swift in Sources */,
+				96CE3F6125F444B50037E3A4 /* SweatAndToil.swift in Sources */,
+				96CE3F8D25F444F40037E3A4 /* TerritoryAPI.swift in Sources */,
+				96CE3F8B25F444F40037E3A4 /* SectorAPI.swift in Sources */,
 				E97D460625EB244700AE47B0 /* ContentView.swift in Sources */,
+				96CE3F8525F444F40037E3A4 /* GoodAPI.swift in Sources */,
+				96CE3F8925F444F40037E3A4 /* MechanismAPI.swift in Sources */,
+				96CE3F8E25F444F40037E3A4 /* CountryAPI.swift in Sources */,
+				96CE3F7525F444E60037E3A4 /* Country.swift in Sources */,
+				96CE3F8A25F444F40037E3A4 /* RegionAPI.swift in Sources */,
+				96CE3F7225F444E60037E3A4 /* Territory.swift in Sources */,
+				96CE3F6F25F444E60037E3A4 /* Region.swift in Sources */,
+				96CE3F8425F444F40037E3A4 /* LegalStandardAPI.swift in Sources */,
+				96CE3F8F25F444F40037E3A4 /* SuggestedActionAPI.swift in Sources */,
 				E9814F9725ED675F0050AB35 /* DataStore.swift in Sources */,
+				96CE3F8C25F444F40037E3A4 /* AdvancementLevelAPI.swift in Sources */,
 				E97D460425EB244700AE47B0 /* shopawareApp.swift in Sources */,
+				96CE3F7625F444E60037E3A4 /* AdvancementLevel.swift in Sources */,
+				96CE3F7425F444E60037E3A4 /* CountryGood.swift in Sources */,
+				96CE3F7125F444E60037E3A4 /* Sector.swift in Sources */,
+				96CE3F8725F444F40037E3A4 /* EnforcementAPI.swift in Sources */,
+				96CE3F8625F444F40037E3A4 /* AssessmentAPI.swift in Sources */,
+				96CE3F7325F444E60037E3A4 /* Assessment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +448,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"shopaware/Preview Content\"";
-				DEVELOPMENT_TEAM = K287H78N9T;
+				DEVELOPMENT_TEAM = RV923KLYR7;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = shopaware/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -374,7 +456,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "julyan-keller-baruch.shopaware";
+				PRODUCT_BUNDLE_IDENTIFIER = ece1778.shopaware;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -389,7 +471,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"shopaware/Preview Content\"";
-				DEVELOPMENT_TEAM = K287H78N9T;
+				DEVELOPMENT_TEAM = RV923KLYR7;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = shopaware/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -397,7 +479,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "julyan-keller-baruch.shopaware";
+				PRODUCT_BUNDLE_IDENTIFIER = ece1778.shopaware;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
