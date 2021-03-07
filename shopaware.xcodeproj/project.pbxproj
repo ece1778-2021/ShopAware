@@ -8,9 +8,41 @@
 
 /* Begin PBXBuildFile section */
 		219E44BA93C7B6EB936BED63 /* Pods_shopaware.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D036281CF8F777C62931987 /* Pods_shopaware.framework */; };
-		96F18FF825EED23500CC73D1 /* network in Resources */ = {isa = PBXBuildFile; fileRef = 96F18FF525EED23500CC73D1 /* network */; };
-		96F18FF925EED23500CC73D1 /* data in Resources */ = {isa = PBXBuildFile; fileRef = 96F18FF625EED23500CC73D1 /* data */; };
-		96F18FFA25EED23500CC73D1 /* models in Resources */ = {isa = PBXBuildFile; fileRef = 96F18FF725EED23500CC73D1 /* models */; };
+		96CE3F6125F444B50037E3A4 /* SweatAndToil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F6025F444B50037E3A4 /* SweatAndToil.swift */; };
+		96CE3F6F25F444E60037E3A4 /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F6725F444E60037E3A4 /* Region.swift */; };
+		96CE3F7025F444E60037E3A4 /* Good.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F6825F444E60037E3A4 /* Good.swift */; };
+		96CE3F7125F444E60037E3A4 /* Sector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F6925F444E60037E3A4 /* Sector.swift */; };
+		96CE3F7225F444E60037E3A4 /* Territory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F6A25F444E60037E3A4 /* Territory.swift */; };
+		96CE3F7325F444E60037E3A4 /* Assessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F6B25F444E60037E3A4 /* Assessment.swift */; };
+		96CE3F7425F444E60037E3A4 /* CountryGood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F6C25F444E60037E3A4 /* CountryGood.swift */; };
+		96CE3F7525F444E60037E3A4 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F6D25F444E60037E3A4 /* Country.swift */; };
+		96CE3F7625F444E60037E3A4 /* AdvancementLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F6E25F444E60037E3A4 /* AdvancementLevel.swift */; };
+		96CE3F8425F444F40037E3A4 /* LegalStandardAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F7825F444F30037E3A4 /* LegalStandardAPI.swift */; };
+		96CE3F8525F444F40037E3A4 /* GoodAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F7925F444F30037E3A4 /* GoodAPI.swift */; };
+		96CE3F8625F444F40037E3A4 /* AssessmentAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F7A25F444F30037E3A4 /* AssessmentAPI.swift */; };
+		96CE3F8725F444F40037E3A4 /* EnforcementAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F7B25F444F30037E3A4 /* EnforcementAPI.swift */; };
+		96CE3F8825F444F40037E3A4 /* CountryGoodAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F7C25F444F30037E3A4 /* CountryGoodAPI.swift */; };
+		96CE3F8925F444F40037E3A4 /* MechanismAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F7D25F444F30037E3A4 /* MechanismAPI.swift */; };
+		96CE3F8A25F444F40037E3A4 /* RegionAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F7E25F444F30037E3A4 /* RegionAPI.swift */; };
+		96CE3F8B25F444F40037E3A4 /* SectorAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F7F25F444F30037E3A4 /* SectorAPI.swift */; };
+		96CE3F8C25F444F40037E3A4 /* AdvancementLevelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F8025F444F30037E3A4 /* AdvancementLevelAPI.swift */; };
+		96CE3F8D25F444F40037E3A4 /* TerritoryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F8125F444F30037E3A4 /* TerritoryAPI.swift */; };
+		96CE3F8E25F444F40037E3A4 /* CountryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F8225F444F30037E3A4 /* CountryAPI.swift */; };
+		96CE3F8F25F444F40037E3A4 /* SuggestedActionAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F8325F444F30037E3A4 /* SuggestedActionAPI.swift */; };
+		96CE3FD525F451D30037E3A4 /* ProductCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3FD425F451D30037E3A4 /* ProductCountry.swift */; };
+		96CE3FDC25F459C20037E3A4 /* sweatAndToilApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3FDB25F459C20037E3A4 /* sweatAndToilApi.swift */; };
+		96CE400D25F45F680037E3A4 /* sectors.json in Resources */ = {isa = PBXBuildFile; fileRef = 96CE400125F45F680037E3A4 /* sectors.json */; };
+		96CE400E25F45F680037E3A4 /* legalStandards.json in Resources */ = {isa = PBXBuildFile; fileRef = 96CE400225F45F680037E3A4 /* legalStandards.json */; };
+		96CE400F25F45F680037E3A4 /* advancementLevels.json in Resources */ = {isa = PBXBuildFile; fileRef = 96CE400325F45F680037E3A4 /* advancementLevels.json */; };
+		96CE401025F45F690037E3A4 /* mechanisms.json in Resources */ = {isa = PBXBuildFile; fileRef = 96CE400425F45F680037E3A4 /* mechanisms.json */; };
+		96CE401125F45F690037E3A4 /* suggestedActions.json in Resources */ = {isa = PBXBuildFile; fileRef = 96CE400525F45F680037E3A4 /* suggestedActions.json */; };
+		96CE401225F45F690037E3A4 /* territories.json in Resources */ = {isa = PBXBuildFile; fileRef = 96CE400625F45F680037E3A4 /* territories.json */; };
+		96CE401325F45F690037E3A4 /* enforcements.json in Resources */ = {isa = PBXBuildFile; fileRef = 96CE400725F45F680037E3A4 /* enforcements.json */; };
+		96CE401425F45F690037E3A4 /* regions.json in Resources */ = {isa = PBXBuildFile; fileRef = 96CE400825F45F680037E3A4 /* regions.json */; };
+		96CE401525F45F690037E3A4 /* countryGoods.json in Resources */ = {isa = PBXBuildFile; fileRef = 96CE400925F45F680037E3A4 /* countryGoods.json */; };
+		96CE401625F45F690037E3A4 /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = 96CE400A25F45F680037E3A4 /* countries.json */; };
+		96CE401725F45F690037E3A4 /* goods.json in Resources */ = {isa = PBXBuildFile; fileRef = 96CE400B25F45F680037E3A4 /* goods.json */; };
+		96CE401825F45F690037E3A4 /* assessments.json in Resources */ = {isa = PBXBuildFile; fileRef = 96CE400C25F45F680037E3A4 /* assessments.json */; };
 		E9422D4025F2000A00DF7EDD /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = E9422D3F25F2000A00DF7EDD /* CodeScanner */; };
 		E97D460425EB244700AE47B0 /* shopawareApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97D460325EB244700AE47B0 /* shopawareApp.swift */; };
 		E97D460625EB244700AE47B0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97D460525EB244700AE47B0 /* ContentView.swift */; };
@@ -24,9 +56,41 @@
 		1B4B37626208E965AE0BCAE5 /* Pods-shopaware.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shopaware.release.xcconfig"; path = "Target Support Files/Pods-shopaware/Pods-shopaware.release.xcconfig"; sourceTree = "<group>"; };
 		3D036281CF8F777C62931987 /* Pods_shopaware.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_shopaware.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE959294008C3125E9CB745 /* Pods-shopaware.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shopaware.debug.xcconfig"; path = "Target Support Files/Pods-shopaware/Pods-shopaware.debug.xcconfig"; sourceTree = "<group>"; };
-		96F18FF525EED23500CC73D1 /* network */ = {isa = PBXFileReference; lastKnownFileType = folder; path = network; sourceTree = "<group>"; };
-		96F18FF625EED23500CC73D1 /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = data; sourceTree = "<group>"; };
-		96F18FF725EED23500CC73D1 /* models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = models; sourceTree = "<group>"; };
+		96CE3F6025F444B50037E3A4 /* SweatAndToil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SweatAndToil.swift; sourceTree = "<group>"; };
+		96CE3F6725F444E60037E3A4 /* Region.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
+		96CE3F6825F444E60037E3A4 /* Good.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Good.swift; sourceTree = "<group>"; };
+		96CE3F6925F444E60037E3A4 /* Sector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sector.swift; sourceTree = "<group>"; };
+		96CE3F6A25F444E60037E3A4 /* Territory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Territory.swift; sourceTree = "<group>"; };
+		96CE3F6B25F444E60037E3A4 /* Assessment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assessment.swift; sourceTree = "<group>"; };
+		96CE3F6C25F444E60037E3A4 /* CountryGood.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryGood.swift; sourceTree = "<group>"; };
+		96CE3F6D25F444E60037E3A4 /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		96CE3F6E25F444E60037E3A4 /* AdvancementLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvancementLevel.swift; sourceTree = "<group>"; };
+		96CE3F7825F444F30037E3A4 /* LegalStandardAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LegalStandardAPI.swift; sourceTree = "<group>"; };
+		96CE3F7925F444F30037E3A4 /* GoodAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodAPI.swift; sourceTree = "<group>"; };
+		96CE3F7A25F444F30037E3A4 /* AssessmentAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssessmentAPI.swift; sourceTree = "<group>"; };
+		96CE3F7B25F444F30037E3A4 /* EnforcementAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnforcementAPI.swift; sourceTree = "<group>"; };
+		96CE3F7C25F444F30037E3A4 /* CountryGoodAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryGoodAPI.swift; sourceTree = "<group>"; };
+		96CE3F7D25F444F30037E3A4 /* MechanismAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MechanismAPI.swift; sourceTree = "<group>"; };
+		96CE3F7E25F444F30037E3A4 /* RegionAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegionAPI.swift; sourceTree = "<group>"; };
+		96CE3F7F25F444F30037E3A4 /* SectorAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectorAPI.swift; sourceTree = "<group>"; };
+		96CE3F8025F444F30037E3A4 /* AdvancementLevelAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvancementLevelAPI.swift; sourceTree = "<group>"; };
+		96CE3F8125F444F30037E3A4 /* TerritoryAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerritoryAPI.swift; sourceTree = "<group>"; };
+		96CE3F8225F444F30037E3A4 /* CountryAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryAPI.swift; sourceTree = "<group>"; };
+		96CE3F8325F444F30037E3A4 /* SuggestedActionAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestedActionAPI.swift; sourceTree = "<group>"; };
+		96CE3FD425F451D30037E3A4 /* ProductCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCountry.swift; sourceTree = "<group>"; };
+		96CE3FDB25F459C20037E3A4 /* sweatAndToilApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sweatAndToilApi.swift; sourceTree = "<group>"; };
+		96CE400125F45F680037E3A4 /* sectors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = sectors.json; path = data/sectors.json; sourceTree = "<group>"; };
+		96CE400225F45F680037E3A4 /* legalStandards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = legalStandards.json; path = data/legalStandards.json; sourceTree = "<group>"; };
+		96CE400325F45F680037E3A4 /* advancementLevels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = advancementLevels.json; path = data/advancementLevels.json; sourceTree = "<group>"; };
+		96CE400425F45F680037E3A4 /* mechanisms.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = mechanisms.json; path = data/mechanisms.json; sourceTree = "<group>"; };
+		96CE400525F45F680037E3A4 /* suggestedActions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = suggestedActions.json; path = data/suggestedActions.json; sourceTree = "<group>"; };
+		96CE400625F45F680037E3A4 /* territories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = territories.json; path = data/territories.json; sourceTree = "<group>"; };
+		96CE400725F45F680037E3A4 /* enforcements.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = enforcements.json; path = data/enforcements.json; sourceTree = "<group>"; };
+		96CE400825F45F680037E3A4 /* regions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = regions.json; path = data/regions.json; sourceTree = "<group>"; };
+		96CE400925F45F680037E3A4 /* countryGoods.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = countryGoods.json; path = data/countryGoods.json; sourceTree = "<group>"; };
+		96CE400A25F45F680037E3A4 /* countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = countries.json; path = data/countries.json; sourceTree = "<group>"; };
+		96CE400B25F45F680037E3A4 /* goods.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = goods.json; path = data/goods.json; sourceTree = "<group>"; };
+		96CE400C25F45F680037E3A4 /* assessments.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = assessments.json; path = data/assessments.json; sourceTree = "<group>"; };
 		E97D460025EB244700AE47B0 /* shopaware.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shopaware.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E97D460325EB244700AE47B0 /* shopawareApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shopawareApp.swift; sourceTree = "<group>"; };
 		E97D460525EB244700AE47B0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,6 +114,78 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		96CE3FD825F459710037E3A4 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				96CE3FD925F459970037E3A4 /* apiModels */,
+				96CE3F6E25F444E60037E3A4 /* AdvancementLevel.swift */,
+				96CE3F6B25F444E60037E3A4 /* Assessment.swift */,
+				96CE3F6D25F444E60037E3A4 /* Country.swift */,
+				96CE3F6C25F444E60037E3A4 /* CountryGood.swift */,
+				96CE3F6825F444E60037E3A4 /* Good.swift */,
+				96CE3F6725F444E60037E3A4 /* Region.swift */,
+				96CE3F6925F444E60037E3A4 /* Sector.swift */,
+				96CE3F6A25F444E60037E3A4 /* Territory.swift */,
+				96CE3F6025F444B50037E3A4 /* SweatAndToil.swift */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
+		96CE3FD925F459970037E3A4 /* apiModels */ = {
+			isa = PBXGroup;
+			children = (
+				96CE3F8025F444F30037E3A4 /* AdvancementLevelAPI.swift */,
+				96CE3F7A25F444F30037E3A4 /* AssessmentAPI.swift */,
+				96CE3F8225F444F30037E3A4 /* CountryAPI.swift */,
+				96CE3F7C25F444F30037E3A4 /* CountryGoodAPI.swift */,
+				96CE3F7B25F444F30037E3A4 /* EnforcementAPI.swift */,
+				96CE3F7925F444F30037E3A4 /* GoodAPI.swift */,
+				96CE3F7825F444F30037E3A4 /* LegalStandardAPI.swift */,
+				96CE3F7D25F444F30037E3A4 /* MechanismAPI.swift */,
+				96CE3F7E25F444F30037E3A4 /* RegionAPI.swift */,
+				96CE3F7F25F444F30037E3A4 /* SectorAPI.swift */,
+				96CE3F8325F444F30037E3A4 /* SuggestedActionAPI.swift */,
+				96CE3F8125F444F30037E3A4 /* TerritoryAPI.swift */,
+			);
+			name = apiModels;
+			sourceTree = "<group>";
+		};
+		96CE3FDA25F459B10037E3A4 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				96CE3FDB25F459C20037E3A4 /* sweatAndToilApi.swift */,
+			);
+			name = network;
+			sourceTree = "<group>";
+		};
+		96CE3FE025F459E60037E3A4 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				E97D460525EB244700AE47B0 /* ContentView.swift */,
+				96CE3FD425F451D30037E3A4 /* ProductCountry.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		96CE400025F45F570037E3A4 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				96CE400325F45F680037E3A4 /* advancementLevels.json */,
+				96CE400C25F45F680037E3A4 /* assessments.json */,
+				96CE400A25F45F680037E3A4 /* countries.json */,
+				96CE400925F45F680037E3A4 /* countryGoods.json */,
+				96CE400725F45F680037E3A4 /* enforcements.json */,
+				96CE400B25F45F680037E3A4 /* goods.json */,
+				96CE400225F45F680037E3A4 /* legalStandards.json */,
+				96CE400425F45F680037E3A4 /* mechanisms.json */,
+				96CE400825F45F680037E3A4 /* regions.json */,
+				96CE400125F45F680037E3A4 /* sectors.json */,
+				96CE400525F45F680037E3A4 /* suggestedActions.json */,
+				96CE400625F45F680037E3A4 /* territories.json */,
+			);
+			name = data;
+			sourceTree = "<group>";
+		};
 		CE2D295D0D56DF8840717CDA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,12 +224,12 @@
 		E97D460225EB244700AE47B0 /* shopaware */ = {
 			isa = PBXGroup;
 			children = (
-				96F18FF625EED23500CC73D1 /* data */,
-				96F18FF725EED23500CC73D1 /* models */,
-				96F18FF525EED23500CC73D1 /* network */,
+				96CE400025F45F570037E3A4 /* data */,
+				96CE3FE025F459E60037E3A4 /* views */,
+				96CE3FDA25F459B10037E3A4 /* network */,
+				96CE3FD825F459710037E3A4 /* models */,
 				E9814F9625ED675F0050AB35 /* DataStore.swift */,
 				E97D460325EB244700AE47B0 /* shopawareApp.swift */,
-				E97D460525EB244700AE47B0 /* ContentView.swift */,
 				E97D460725EB244900AE47B0 /* Assets.xcassets */,
 				E97D460C25EB244900AE47B0 /* Info.plist */,
 				E97D460925EB244900AE47B0 /* Preview Content */,
@@ -176,11 +312,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96F18FFA25EED23500CC73D1 /* models in Resources */,
-				96F18FF825EED23500CC73D1 /* network in Resources */,
+				96CE400E25F45F680037E3A4 /* legalStandards.json in Resources */,
 				E97D460B25EB244900AE47B0 /* Preview Assets.xcassets in Resources */,
-				96F18FF925EED23500CC73D1 /* data in Resources */,
+				96CE401325F45F690037E3A4 /* enforcements.json in Resources */,
+				96CE400D25F45F680037E3A4 /* sectors.json in Resources */,
+				96CE400F25F45F680037E3A4 /* advancementLevels.json in Resources */,
+				96CE401725F45F690037E3A4 /* goods.json in Resources */,
+				96CE401525F45F690037E3A4 /* countryGoods.json in Resources */,
+				96CE401625F45F690037E3A4 /* countries.json in Resources */,
+				96CE401425F45F690037E3A4 /* regions.json in Resources */,
+				96CE401825F45F690037E3A4 /* assessments.json in Resources */,
+				96CE401225F45F690037E3A4 /* territories.json in Resources */,
+				96CE401125F45F690037E3A4 /* suggestedActions.json in Resources */,
 				E97D460825EB244900AE47B0 /* Assets.xcassets in Resources */,
+				96CE401025F45F690037E3A4 /* mechanisms.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,9 +378,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96CE3F7025F444E60037E3A4 /* Good.swift in Sources */,
+				96CE3F8825F444F40037E3A4 /* CountryGoodAPI.swift in Sources */,
+				96CE3F6125F444B50037E3A4 /* SweatAndToil.swift in Sources */,
+				96CE3F8D25F444F40037E3A4 /* TerritoryAPI.swift in Sources */,
+				96CE3F8B25F444F40037E3A4 /* SectorAPI.swift in Sources */,
 				E97D460625EB244700AE47B0 /* ContentView.swift in Sources */,
+				96CE3F8525F444F40037E3A4 /* GoodAPI.swift in Sources */,
+				96CE3FD525F451D30037E3A4 /* ProductCountry.swift in Sources */,
+				96CE3F8925F444F40037E3A4 /* MechanismAPI.swift in Sources */,
+				96CE3F8E25F444F40037E3A4 /* CountryAPI.swift in Sources */,
+				96CE3F7525F444E60037E3A4 /* Country.swift in Sources */,
+				96CE3F8A25F444F40037E3A4 /* RegionAPI.swift in Sources */,
+				96CE3F7225F444E60037E3A4 /* Territory.swift in Sources */,
+				96CE3F6F25F444E60037E3A4 /* Region.swift in Sources */,
+				96CE3F8425F444F40037E3A4 /* LegalStandardAPI.swift in Sources */,
+				96CE3F8F25F444F40037E3A4 /* SuggestedActionAPI.swift in Sources */,
+				96CE3FDC25F459C20037E3A4 /* sweatAndToilApi.swift in Sources */,
 				E9814F9725ED675F0050AB35 /* DataStore.swift in Sources */,
+				96CE3F8C25F444F40037E3A4 /* AdvancementLevelAPI.swift in Sources */,
 				E97D460425EB244700AE47B0 /* shopawareApp.swift in Sources */,
+				96CE3F7625F444E60037E3A4 /* AdvancementLevel.swift in Sources */,
+				96CE3F7425F444E60037E3A4 /* CountryGood.swift in Sources */,
+				96CE3F7125F444E60037E3A4 /* Sector.swift in Sources */,
+				96CE3F8725F444F40037E3A4 /* EnforcementAPI.swift in Sources */,
+				96CE3F8625F444F40037E3A4 /* AssessmentAPI.swift in Sources */,
+				96CE3F7325F444E60037E3A4 /* Assessment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,7 +542,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "julyan-keller-baruch.shopaware";
+				PRODUCT_BUNDLE_IDENTIFIER = ece1778.shopaware;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -397,7 +565,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "julyan-keller-baruch.shopaware";
+				PRODUCT_BUNDLE_IDENTIFIER = ece1778.shopaware;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

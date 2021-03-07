@@ -17,7 +17,7 @@ class SweatAndToilAPI {
         
         let task = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
           if let error = error {
-            print("Error with fetching films: \(error)")
+            print("Error with fetching: \(error)")
             return
           }
             
@@ -46,7 +46,7 @@ class SweatAndToilAPI {
         
         let task = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
           if let error = error {
-            print("Error with fetching films: \(error)")
+            print("Error with fetching: \(error)")
             return
           }
             
@@ -75,7 +75,7 @@ class SweatAndToilAPI {
         
         let task = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
           if let error = error {
-            print("Error with fetching films: \(error)")
+            print("Error with fetching: \(error)")
             return
           }
             
@@ -104,7 +104,7 @@ class SweatAndToilAPI {
         
         let task = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
           if let error = error {
-            print("Error with fetching films: \(error)")
+            print("Error with fetching: \(error)")
             return
           }
             
@@ -133,7 +133,7 @@ class SweatAndToilAPI {
         
         let task = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
           if let error = error {
-            print("Error with fetching films: \(error)")
+            print("Error with fetching: \(error)")
             return
           }
             
@@ -162,7 +162,7 @@ class SweatAndToilAPI {
         
         let task = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
           if let error = error {
-            print("Error with fetching films: \(error)")
+            print("Error with fetching: \(error)")
             return
           }
             
@@ -191,7 +191,7 @@ class SweatAndToilAPI {
         
         let task = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
           if let error = error {
-            print("Error with fetching films: \(error)")
+            print("Error with fetching: \(error)")
             return
           }
             
@@ -225,7 +225,7 @@ class SweatAndToilAPI {
         let session = URLSession(configuration: config)
         let task = session.dataTask(with: url, completionHandler: { (data, response, error) in
           if let error = error {
-            print("Error with fetching films: \(error)")
+            print("Error with fetching: \(error)")
             return
           }
             
@@ -258,7 +258,7 @@ class SweatAndToilAPI {
         
         let task = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
           if let error = error {
-            print("Error with fetching films: \(error)")
+            print("Error with fetching: \(error)")
             return
           }
             
@@ -287,7 +287,7 @@ class SweatAndToilAPI {
         
         let task = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
           if let error = error {
-            print("Error with fetching films: \(error)")
+            print("Error with fetching: \(error)")
             return
           }
             
@@ -316,7 +316,7 @@ class SweatAndToilAPI {
         
         let task = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
           if let error = error {
-            print("Error with fetching films: \(error)")
+            print("Error with fetching: \(error)")
             return
           }
             
@@ -345,7 +345,7 @@ class SweatAndToilAPI {
         
         let task = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
           if let error = error {
-            print("Error with fetching films: \(error)")
+            print("Error with fetching: \(error)")
             return
           }
             
