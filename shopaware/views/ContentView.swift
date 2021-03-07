@@ -31,6 +31,11 @@ struct ContentView: View {
     
     // Show shopping list at startup, use 1 for barcode scanner.
     @State var selection = 0
+    
+    @State var selectedProduct = false
+    @State var product = ""
+    
+    @State var sweatAndToil: SweatAndToil = SweatAndToil()
 
     func addNewListItem() {
         listItemStore.shoppingListItems.append(ListItem(id: String(listItemStore.shoppingListItems.count + 1), itemName: newListItem))
@@ -70,7 +75,6 @@ struct ContentView: View {
                     Image(systemName: "cart.fill").tag(0)
                     Image(systemName: "barcode.viewfinder").tag(1)
                 }.pickerStyle(SegmentedPickerStyle()).padding(.horizontal)
-                
                 if selection == 0 { // Shopping list
                     NavigationView{
                         VStack {
@@ -78,17 +82,18 @@ struct ContentView: View {
                             List {
                                 ForEach(self.listItemStore.shoppingListItems) {
                                     item in
-                                    if item.itemName == "Chocolate"{
-                                        HStack{
-                                            Text(item.itemName)
-                                            Image(systemName: "exclamationmark.triangle")
-                                            Text("Swipe right for more info")
-                                            Image(systemName: "arrow.right")
-
+                                    NavigationLink(destination: ProductCountryView(sat: sweatAndToil, good: item.itemName)) {
+                                        if item.itemName == "Chocolate"{
+                                            HStack{
+                                                Text(item.itemName)
+                                                Image(systemName: "exclamationmark.triangle")
+                                                Text("Swipe right for more info")
+                                                Image(systemName: "arrow.right")
+                                            }
                                         }
-                                    }
-                                    else {
-                                        Text(item.itemName)
+                                        else {
+                                            Text(item.itemName)
+                                        }
                                     }
                                 }.onMove(perform: self.move)
                                 .onDelete(perform: self.delete)

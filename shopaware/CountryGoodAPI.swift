@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CountryGoodAPI: Codable {
+struct CountryGoodAPI: Codable, Identifiable{
     public var id: String
     public var assessment_id: String
     public var year: String
