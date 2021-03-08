@@ -28,7 +28,8 @@ struct ContentView: View {
     @State var barcode_value = ""
     @State var torchIsOn = false
     @State var isShowingProductCountry = false
-    @State var itemName = ""
+    
+    @State var barcodeItemString = ""
     
     // Show shopping list at startup, use 1 for barcode scanner.
     @State var selection = 0
@@ -122,10 +123,10 @@ struct ContentView: View {
                                     print("BarCodeType =",$0.type.rawValue, "Value =",$0.value)
                                     barcode_value = $0.value
                                     BarcodeApi.fetchProduct(barcode: barcode_value) { (keywords) in
-                                        print(keywords)
-                                        self.itemName = keywords
-                                        self.isShowingProductCountry = true
-                                }
+                                        self.barcodeItemString = keywords
+                                        print(self.barcodeItemString)
+                                        //self.isShowingProductCountry = true
+                                    }
                                     
                                 }
                                 onDraw: {
@@ -150,8 +151,10 @@ struct ContentView: View {
                     }
                 }
             }
-        }.sheet(isPresented: $isShowingProductCountry) {
-            ProductCountryView(sat: sweatAndToil, good: self.itemName)
+        }.sheet(isPresented: Binding<Bool>(get: { self.barcodeItemString != "" }, set: { _ in }), onDismiss: {
+            self.barcodeItemString = ""
+        }) {
+            ProductCountryView(sat: sweatAndToil, good: self.barcodeItemString)
         }
     }
 }
