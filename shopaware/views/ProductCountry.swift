@@ -46,8 +46,27 @@ struct ProductCountryView: View {
     }
     
     init(sat: SweatAndToil, good: String) {
-        self.good = good
-        self.goodCountryList = sat.get_countryGoods_by_good(good: good)
+        self.good = ProductCountryView.getGoodByKeyword(good: good, goods: sat.get_goods_by_name())
+        let cgl  = sat.get_countryGoods_by_good(good: self.good)
+        self.goodCountryList = cgl
+    }
+    
+    static func getGoodByKeyword(good: String, goods: [String]) -> String {
+        print(good)
+        let modifiedGood = good.replacingOccurrences(of: "/", with: " ").replacingOccurrences(of: "-", with: " ").replacingOccurrences(of: ",", with: " ")
+        print(modifiedGood)
+        var array = modifiedGood.components(separatedBy: " ")
+        array.reverse()
+        print(array)
+        for g in array{
+            for gg in goods {
+                if gg.lowercased().trimmingCharacters(in: .whitespacesAndNewlines) == g.lowercased().trimmingCharacters(in: .whitespacesAndNewlines){
+                    print("Found matching: " + gg)
+                    return gg
+                }
+            }
+        }
+        return ""
     }
 }
 
