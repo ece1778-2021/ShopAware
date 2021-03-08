@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class SweatAndToil {
     var regions: [Region] = []
@@ -22,12 +23,22 @@ class SweatAndToil {
     }
     
     func get_countryGoods_by_good(good: String) -> [CountryGood] {
-        return countryGoods.filter{$0.good.name == good}
+        return remove_duplicate_country_goods(countryGoods: countryGoods.filter{$0.good.name.lowercased().trimmingCharacters(in: .whitespacesAndNewlines) == good.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)})
         
     }
     
     func get_goods_by_name() -> [String] {
         return goods.map{ $0.name }
+    }
+    
+    func remove_duplicate_country_goods(countryGoods: [CountryGood]) -> [CountryGood] {
+        var unique = [CountryGood]()
+        for cg in countryGoods {
+            if !unique.contains(where: {$0.country.name == cg.country.name }) {
+                unique.append(cg)
+            }
+        }
+        return unique
     }
     
     init() {
