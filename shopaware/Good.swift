@@ -17,5 +17,4 @@ struct Good: Codable {
         self.sector = sector
         self.name = name
     }
-    
 }

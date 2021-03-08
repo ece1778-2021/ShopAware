@@ -19,7 +19,6 @@ import AVFoundation
 import CodeScanner
 
 
-
 struct ContentView: View {
     // Shopping list variables
     @ObservedObject var listItemStore = ListItemStore()
@@ -28,6 +27,8 @@ struct ContentView: View {
     // Barcode scanner variables
     @State var barcode_value = ""
     @State var torchIsOn = false
+    @State var isShowingProductCountry = false
+    @State var itemName = ""
     
     // Show shopping list at startup, use 1 for barcode scanner.
     @State var selection = 0
@@ -49,7 +50,6 @@ struct ContentView: View {
     func delete(at offsets: IndexSet) {
         listItemStore.shoppingListItems.remove(atOffsets: offsets)
     }
-    
 
     var searchBar : some View {
         HStack {
@@ -83,11 +83,11 @@ struct ContentView: View {
                                 ForEach(self.listItemStore.shoppingListItems) {
                                     item in
                                     NavigationLink(destination: ProductCountryView(sat: sweatAndToil, good: item.itemName)) {
-                                        if item.itemName == "Chocolate"{
+                                        if item.itemName == "Chocolatwsdfioewupqroeirudsae"{
                                             HStack{
                                                 Text(item.itemName)
                                                 Image(systemName: "exclamationmark.triangle")
-                                                Text("Swipe right for more info")
+                                                Text("Tap for more info")
                                                 Image(systemName: "arrow.right")
                                             }
                                         }
@@ -121,11 +121,17 @@ struct ContentView: View {
                                     //When the scanner found a barcode
                                     print("BarCodeType =",$0.type.rawValue, "Value =",$0.value)
                                     barcode_value = $0.value
+                                    BarcodeApi.fetchProduct(barcode: barcode_value) { (keywords) in
+                                        print(keywords)
+                                        self.itemName = keywords
+                                        self.isShowingProductCountry = true
+                                }
+                                    
                                 }
                                 onDraw: {
-                                    print("Preview View Size = \($0.cameraPreviewView.bounds)")
-                                    print("Barcode Corners = \($0.corners)")
-                                    print(barcode_value)
+                                    //print("Preview View Size = \($0.cameraPreviewView.bounds)")
+                                    //print("Barcode Corners = \($0.corners)")
+                                    //print(barcode_value)
 
                                     //line width
                                     let lineWidth = 2
@@ -144,6 +150,54 @@ struct ContentView: View {
                     }
                 }
             }
+        }.sheet(isPresented: $isShowingProductCountry) {
+            ProductCountryView(sat: sweatAndToil, good: self.itemName)
         }
+    }
+}
+
+
+class BarcodeApi {
+    static var DOMAIN_URL = "https://world.openfoodfacts.org/api/v0/product/"
+    static func fetchProduct(barcode: String, completionHandler: @escaping (String) -> Void) {
+        let url = URL(string: DOMAIN_URL + barcode + ".json")!
+        let task = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
+          if let error = error {
+            print("Error with fetching product: \(error)")
+            return
+          }
+            guard let httpResponse = response as? HTTPURLResponse,
+                (200...299).contains(httpResponse.statusCode) else {
+                if let response = response {
+                    print("Error with the response, unexpected status code: \(response) ")
+                    return
+                } else {
+                    print("Error with the response, no status code")
+                    return
+                }
+          }
+            do {
+                let myJson = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
+                // Added this to make sure that app doesn't crash when product isn't found.
+                // Will use this to display a message to user.
+                if myJson ["status_verbose"] as! String == "product not found"{
+                    completionHandler("Product not found")
+                }
+                else{
+                let product = myJson["product"] as! NSDictionary
+                // stick these together and return
+                let product_name = product["product_name"] as? String ?? ""
+                let product_name_en = product["product_name_en"] as? String ?? ""
+                let product_brands = product["brands"] as? String ?? ""
+                let categories_old = product["categories_old"] as? String ?? ""
+                let name_en = product["name_en"] as? String ?? ""
+                let keywords = product_name + " " + product_name_en + " " + product_brands + " " + categories_old + " " + name_en
+                completionHandler(keywords)
+                }
+                
+            } catch {
+            }
+        })
+        task.resume()
     }
 }
