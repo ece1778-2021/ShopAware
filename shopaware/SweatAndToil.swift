@@ -24,7 +24,6 @@ class SweatAndToil {
     
     func get_countryGoods_by_good(good: String) -> [CountryGood] {
         return remove_duplicate_country_goods(countryGoods: countryGoods.filter{$0.good.name.lowercased().trimmingCharacters(in: .whitespacesAndNewlines) == good.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)})
-        
     }
     
     func get_goods_by_name() -> [String] {

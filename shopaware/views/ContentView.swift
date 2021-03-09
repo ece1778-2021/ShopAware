@@ -38,7 +38,15 @@ struct ContentView: View {
     @State var product = ""
     
     @State var sweatAndToil: SweatAndToil = SweatAndToil()
-
+    @State var goodsList: [String] = []
+    
+    func createGoodsList() {
+        self.goodsList = []
+        for good in sweatAndToil.goods{
+            goodsList.append(good.name)
+        }
+    }
+    
     func addNewListItem() {
         listItemStore.shoppingListItems.append(ListItem(id: String(listItemStore.shoppingListItems.count + 1), itemName: newListItem))
         self.newListItem = ""
@@ -76,6 +84,8 @@ struct ContentView: View {
                     Image(systemName: "cart.fill").tag(0)
                     Image(systemName: "barcode.viewfinder").tag(1)
                 }.pickerStyle(SegmentedPickerStyle()).padding(.horizontal)
+                                
+                
                 if selection == 0 { // Shopping list
                     NavigationView{
                         VStack {
@@ -83,24 +93,27 @@ struct ContentView: View {
                             List {
                                 ForEach(self.listItemStore.shoppingListItems) {
                                     item in
+                                    if self.goodsList.contains(item.itemName){
+                                    //if item.itemName == "Tea"{
                                     NavigationLink(destination: ProductCountryView(sat: sweatAndToil, good: item.itemName)) {
-                                        if item.itemName == "Chocolatwsdfioewupqroeirudsae"{
                                             HStack{
                                                 Text(item.itemName)
-                                                Image(systemName: "exclamationmark.triangle")
+                                                Image(systemName: "exclamationmark.triangle.fill")
                                                 Text("Tap for more info")
                                                 Image(systemName: "arrow.right")
                                             }
                                         }
+                                    }
                                         else {
                                             Text(item.itemName)
-                                        }
                                     }
                                 }.onMove(perform: self.move)
                                 .onDelete(perform: self.delete)
                             }.navigationBarTitle("Shopping list")
                             .navigationBarItems(trailing: EditButton())
                         }
+                    }.onAppear{
+                        self.createGoodsList()
                     }
                 }
                 
