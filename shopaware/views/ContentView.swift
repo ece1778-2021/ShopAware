@@ -40,6 +40,24 @@ struct ContentView: View {
     @State var sweatAndToil: SweatAndToil = SweatAndToil()
     @State var goodsList: [String] = []
     
+    let defaults = UserDefaults.standard
+
+    init() {
+        print("init")
+        let idData = defaults.object(forKey: "shoppingListID") as? [String] ?? []
+        print(idData)
+        let nameData = defaults.object(forKey: "shoppingListName") as? [String] ?? []
+        print(nameData)
+        if !idData.isEmpty && !nameData.isEmpty {
+            print("nameData defined")
+            for (index, _) in idData.enumerated() {
+                print("number")
+                print(index)
+                listItemStore.shoppingListItems.append(ListItem(id: String(idData[index]), itemName: nameData[index]))
+           }
+        }
+    }
+    
     func createGoodsList() {
         self.goodsList = []
         for good in sweatAndToil.goods{
@@ -50,14 +68,20 @@ struct ContentView: View {
     func addNewListItem() {
         listItemStore.shoppingListItems.append(ListItem(id: String(listItemStore.shoppingListItems.count + 1), itemName: newListItem))
         self.newListItem = ""
+        defaults.set(listItemStore.shoppingListItems.map{ $0.id}, forKey:"shoppingListID")
+        defaults.set(listItemStore.shoppingListItems.map{ $0.itemName}, forKey:"shoppingListName")
     }
     
     func move(from source: IndexSet, to destination: Int){
         listItemStore.shoppingListItems.move(fromOffsets: source, toOffset: destination)
+        defaults.set(listItemStore.shoppingListItems.map{ $0.id}, forKey:"shoppingListID")
+        defaults.set(listItemStore.shoppingListItems.map{ $0.itemName}, forKey:"shoppingListName")
     }
     
     func delete(at offsets: IndexSet) {
         listItemStore.shoppingListItems.remove(atOffsets: offsets)
+        defaults.set(listItemStore.shoppingListItems.map{ $0.id}, forKey:"shoppingListID")
+        defaults.set(listItemStore.shoppingListItems.map{ $0.itemName}, forKey:"shoppingListName")
     }
 
     var searchBar : some View {
