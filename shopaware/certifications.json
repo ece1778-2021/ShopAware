@@ -1,0 +1,169 @@
+[
+  {
+    "name": "UTZ/ Rainforest Alliance",
+    "old_seal": "old_seal_utz",
+    "current_seal": "current_seal_utz",
+    "objectives":
+        [
+            {
+                "title": "Objective",
+                "body": "UTZ certified products are grown in accordance with guidelines for better farming methods and working conditions, as well as better care for nature and future generations. ",
+                "link": "https://utz.org/what-we-offer/certification/the-standard/"
+            },
+            {
+                "title": "",
+                "body": "Rainforest Alliance’s mission is to create a more sustainable world by using social and market forces to protect nature and improve the lives of farmers and forest communities. ",
+                "link": "https://www.rainforest-alliance.org/faqs/what-does-rainforest-alliance-certified-mean"
+            },
+            {
+                "title": "",
+                "body": "Historically, UTZ has focused more on workers’ rights whereas Rainforest Alliance has focused more on environmental protection. In  2018, both certifications merged together. This means that companies who wish to work with both certifications will need to be compliant with the requirements for both programs. However, a company who had a successful audit for one of the certifications will not have to be audited by a third-party certifier for the other program. ",
+                "link": ""
+            }
+        ],
+    "benefits":
+        [
+            {
+                "title": "Payment of a premium. ",
+                "body": "Producers are paid a premium for their products if they abide by the labour and environmental guidelines set in the UTZ and Rainforest Alliance standards.",
+                "link": " "
+            },
+            {
+                "title": "Training & awareness.",
+                "body": "Producers receive training on environmental and labour issues and become aware of the good practices in these areas that they must implement to meet and maintain their certifications. This can benefit the environment and the workers. ",
+                "link": " "
+            },
+            {
+                "title": "Empowerment of women and indigenous communities.",
+                "body": "UTZ and Rainforest Alliance set up specific initiatives to empower women and indigenous communities in sustainable agriculture.",
+                "link": "https://www.rainforest-alliance.org/issues/human-rights"
+            }
+        ],
+    "critisims":
+        [
+            {
+                "title": "No guarantee on forced or child labour.",
+                "body": "Like any other certifications, Forced labour and child labour are prohibited under the UTZ and Rainforest Alliance Standards. However, these certifications bodies cannot guarantee that the products they certify are 100% free of these harmful labour practices. ",
+                "link": ""
+            },
+            {
+                "title": "Does not guarantee a living income.",
+                "body": "The current UTZ/Rainforest Alliance certification offers no minimum or guaranteed price for farmers or local food producers. Instead, a premium is negotiated between the farmer (or group of farmers) and the buyer. UTZ/Rainforest Alliance does not intervene in the negotiation, and while there are guidelines, the buyer is not required to pay a defined  minimum amount.",
+                "link": "https://utz.org/better-business-hub/strengthening-your-reputation/utz-certified-farmers-get-paid-premium/"
+            },
+            {
+                "title": "",
+                "body": "In cocoa production, a UTZ 2019 impact report found that in the cocoa industry, the per capita net income between certified and non-certified farms was similar and that the premium generally did not cover the cost of investing in more sustainable labor practices (labor, compost, etc.). Similar findings were reaported in the coffee industry, where UTZ certified smallholder farmers struggle to make a living income and employees are not paid a living wage.",
+                "link": "https://issuu.com/rainforest-alliance/docs/rainforest-alliance_impacts_report_2019_singles"
+            },
+            {
+                "title": "Low traceability requirements.",
+                "body": "For certain products, such as cocoa, the traceability requirements of the raw materials are low. Companies are allowed to use a “mass balance system”, meaning that buying a certain volume of UTZ certified cocoa, gives the company “credits” which can be used to sell a volume of conventional, non-certified cocoa as UTZ certified.  (https://utz.org/better-business-hub/sourcing-sustainable-products/taking-mass-balance-to-the-next-phase-of-cocoa-sector-transformation/) ",
+                "link": "https://utz.org/better-business-hub/sourcing-sustainable-products/taking-mass-balance-to-the-next-phase-of-cocoa-sector-transformation/"
+            },
+            {
+                "title": "Reported presence of child labour in UTZ certified farms.",
+                "body": "In 2017, a team of researchers from the Wageningen University & Research and sponsored by UTZ  uncovered that UTZ-certified farmers had more child labourers than farmers who lacked certification in the cocoa industry. About 14 percent of noncertified farmers told surveyors they had child labour; about 16 percent of UTZ-certified farmers did.",
+                "link": "https://library.wur.nl/WebQuery/wurpubs/fulltext/450223"
+            }
+        ],
+    "updates":
+        [
+            {
+                "title": "",
+                "body": "UTZ and Rainforest Alliance have developed a new certification program, which takes effect July 2021.  Some new measures and criteria will be implemented.",
+                "link": ""
+            },
+            {
+                "title": "New sustainability investment premium. ",
+                "body": "There will be a required payment of a sustainability investment premium to farmers in addition to the regular premium. It is a  mandatory cash or in-kind investment from buyers of UTZ/ Rainforest Alliance Certified products to farm certificate holders for the specific purpose of helping them reach compliance with the Sustainable Agriculture Standard.",
+                "link": "https://www.rainforest-alliance.org/business/responsible-sourcing/supply-chain-certification/faq-2020-certification-program-supply-chain-requirements/ "
+            },
+            {
+                "title": "Minimum amount for the regular premium.",
+                "body": "For cocoa only, the new standard provides the minimum regular premium that needs to be paid to farmers. For other crops, however, the premium  will continue to be negotiated between the farmer (or group of farmers) and the buyer.",
+                "link": "https://www.rainforest-alliance.org/business/wp-content/uploads/2021/01/Annex-S14_Shared-Responsibility.pdf"
+            }
+        ]
+  },
+  {
+      "name": "Fairtrade International",
+      "old_seal": "",
+      "current_seal": "current_seal_fair",
+      "objectives": [
+          {
+              "title": "",
+              "body": "Fairtrade aims to promote sustainable development and reduce poverty through fairer trade. The main goals of Fairtrade are making changes to the conventional trading system that aim to benefit disadvantaged small producers and workers and increasing their access to markets. These actions can lead to improvements in small producers’ and workers’ social and economic well-being, as well as to their empowerment, and to environmental sustainability.",
+              "link": "https://www.fairtrade.net/about/what-is-fairtrade "
+          }
+          ],
+      "benefits": [
+          {
+              "title": "Fairtrade sets a minimum price for most products.",
+              "body": "The Fairtrade standard includes a minimum fairtrade price for most products, meaning that companies must pay this minimal value when purchasing raw materials from fairtrade producers. In addition, buyers must pay a defined Fairtrade premium which is an additional sum of money which goes into a communal fund for workers and farmers to use – as they see fit – to improve their social, economic and environmental conditions.",
+              "link": ""
+          },
+          {
+              "title": "Strong auditing system.",
+              "body": "The auditing system builds on the requirements of ISO17065 and was designed following the requirements of ISEAL Assurance Code, the global membership association for sustainability standards.",
+              "link": ""
+          },
+          {
+              "title": "Training & awareness.",
+              "body": "Fairtrade International and the producer networks offer advice, trainings and financial and other support to help producers meet Fairtrade Standards and maintain their certifications.",
+              "link": ""
+          }
+          ],
+      "critisims": [
+          {
+              "title": "No guarantee on forced or child labour.",
+              "body": "Like any other certifications, Forced labour and child labour are prohibited under the Fairtrade Standard. However, Fairtrade cannot guarantee that the products they certify are 100% free of these harmful labour practices. ",
+              "link": ""
+          },
+          {
+              "title": "The set minimum price is not for all products.",
+              "body": "The  fairtrade minimum price and the fairtrade premium and the  is not defined for certain",
+              "link": ""
+          },
+          {
+              "title": "Low traceability requirements.",
+              "body": "For certain products, cocoa, tea, fruit juices and sugar, the traceability requirements of the raw materials are low. Companies are allowed to use a “mass balance system”, meaning that buying a certain volume of Fairtrade certified cocoa gives the company “credits” which can be used to sell a volume of conventional, non-certified cocoa as Fairtrade certified. ",
+              "link": ""
+          }
+          ],
+      "updates": []
+  },
+  {
+      "name": "Fairtrade sourcing Program",
+      "old_seal": "",
+      "current_seal": "current_seal_fcp",
+      "objectives": [
+          {
+            "title": "",
+            "body": "These white Marks indicate that the ingredient named on the tab has been sourced as Fairtrade, such as Fairtrade cocoa in a breakfast cereal. This is different from the black Fairtrade Mark, which signifies that all the ingredients that are available as Fairtrade are Fairtrade certified.",
+            "link": ""
+          }
+          ],
+      "benefits": [],
+      "critisims": [],
+      "updates": []
+  },
+  {
+      "name": "Fair Trade USA",
+      "old_seal": "",
+      "current_seal": "current_seal_ftu",
+      "objectives": [],
+      "benefits": [],
+      "critisims": [],
+      "updates": []
+  },
+  {
+      "name": "Companies’ internal certifications",
+      "old_seal": "",
+      "current_seal": "current_seal_cic",
+      "objectives": [],
+      "benefits": [],
+      "critisims": [],
+      "updates": []
+  }
+]
