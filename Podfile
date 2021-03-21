@@ -17,5 +17,6 @@ pod 'GoogleMLKit/BarcodeScanning'
 #pod 'Firebase/MLVision'
 #pod 'Firebase/MLVisionLabelModel'
 #pod 'Firebase/MLVisionBarcodeModel'
+pod 'SwiftSoup'
 
 end

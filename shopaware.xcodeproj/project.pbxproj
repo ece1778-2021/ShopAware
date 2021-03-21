@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		219E44BA93C7B6EB936BED63 /* Pods_shopaware.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D036281CF8F777C62931987 /* Pods_shopaware.framework */; };
+		960BBE312606B19400292D09 /* webScraper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960BBE302606B19400292D09 /* webScraper.swift */; };
+		960BBE522606F59200292D09 /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960BBE512606F59200292D09 /* Brand.swift */; };
 		96CE3F6125F444B50037E3A4 /* SweatAndToil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F6025F444B50037E3A4 /* SweatAndToil.swift */; };
 		96CE3F6F25F444E60037E3A4 /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F6725F444E60037E3A4 /* Region.swift */; };
 		96CE3F7025F444E60037E3A4 /* Good.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F6825F444E60037E3A4 /* Good.swift */; };
@@ -56,6 +58,8 @@
 		1B4B37626208E965AE0BCAE5 /* Pods-shopaware.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shopaware.release.xcconfig"; path = "Target Support Files/Pods-shopaware/Pods-shopaware.release.xcconfig"; sourceTree = "<group>"; };
 		3D036281CF8F777C62931987 /* Pods_shopaware.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_shopaware.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE959294008C3125E9CB745 /* Pods-shopaware.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shopaware.debug.xcconfig"; path = "Target Support Files/Pods-shopaware/Pods-shopaware.debug.xcconfig"; sourceTree = "<group>"; };
+		960BBE302606B19400292D09 /* webScraper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = webScraper.swift; sourceTree = "<group>"; };
+		960BBE512606F59200292D09 /* Brand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brand.swift; sourceTree = "<group>"; };
 		96CE3F6025F444B50037E3A4 /* SweatAndToil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SweatAndToil.swift; sourceTree = "<group>"; };
 		96CE3F6725F444E60037E3A4 /* Region.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
 		96CE3F6825F444E60037E3A4 /* Good.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Good.swift; sourceTree = "<group>"; };
@@ -127,6 +131,7 @@
 				96CE3F6925F444E60037E3A4 /* Sector.swift */,
 				96CE3F6A25F444E60037E3A4 /* Territory.swift */,
 				96CE3F6025F444B50037E3A4 /* SweatAndToil.swift */,
+				960BBE512606F59200292D09 /* Brand.swift */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -154,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				96CE3FDB25F459C20037E3A4 /* sweatAndToilApi.swift */,
+				960BBE302606B19400292D09 /* webScraper.swift */,
 			);
 			name = network;
 			sourceTree = "<group>";
@@ -393,6 +399,7 @@
 				96CE3F7225F444E60037E3A4 /* Territory.swift in Sources */,
 				96CE3F6F25F444E60037E3A4 /* Region.swift in Sources */,
 				96CE3F8425F444F40037E3A4 /* LegalStandardAPI.swift in Sources */,
+				960BBE312606B19400292D09 /* webScraper.swift in Sources */,
 				96CE3F8F25F444F40037E3A4 /* SuggestedActionAPI.swift in Sources */,
 				96CE3FDC25F459C20037E3A4 /* sweatAndToilApi.swift in Sources */,
 				E9814F9725ED675F0050AB35 /* DataStore.swift in Sources */,
@@ -402,6 +409,7 @@
 				96CE3F7425F444E60037E3A4 /* CountryGood.swift in Sources */,
 				96CE3F7125F444E60037E3A4 /* Sector.swift in Sources */,
 				96CE3F8725F444F40037E3A4 /* EnforcementAPI.swift in Sources */,
+				960BBE522606F59200292D09 /* Brand.swift in Sources */,
 				96CE3F8625F444F40037E3A4 /* AssessmentAPI.swift in Sources */,
 				96CE3F7325F444E60037E3A4 /* Assessment.swift in Sources */,
 			);
