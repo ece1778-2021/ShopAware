@@ -13,6 +13,7 @@ struct ListItem: Identifiable {
     var id = String()
     var itemName = String()
     // Add other features later
+    var isChecked = false
 }
 
 class ListItemStore : ObservableObject {

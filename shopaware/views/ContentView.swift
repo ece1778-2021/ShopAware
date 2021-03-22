@@ -14,6 +14,7 @@ import SDWebImageSwiftUI
 import CarBode
 import AVFoundation
 import CodeScanner
+import SwipeCell
 
 struct ContentView: View {
     // Shopping list variables
@@ -67,8 +68,7 @@ struct ContentView: View {
         self.newListItem = ""
         defaults.set(listItemStore.shoppingListItems.map{ $0.id}, forKey:"shoppingListID")
         defaults.set(listItemStore.shoppingListItems.map{ $0.itemName}, forKey:"shoppingListName")
-        
-        
+ 
     }
     
     func move(from source: IndexSet, to destination: Int){
@@ -82,7 +82,7 @@ struct ContentView: View {
         defaults.set(listItemStore.shoppingListItems.map{ $0.id}, forKey:"shoppingListID")
         defaults.set(listItemStore.shoppingListItems.map{ $0.itemName}, forKey:"shoppingListName")
     }
-
+    
     var searchBar : some View {
         HStack {
             TextField("+ Add a new item", text: self.$newListItem)
@@ -140,22 +140,30 @@ struct ContentView: View {
                             }
                             
                             List {
-                                ForEach(self.listItemStore.shoppingListItems) {
-                                    item in
+                                
+                                ForEach(self.listItemStore.shoppingListItems) { item in
+                                    HStack{
+                                        Text(item.isChecked ? "✅" : "🔲").onTapGesture{
+                                            if let matchingIndex =
+                                                self.listItemStore.shoppingListItems.firstIndex(where: { $0.id == item.id }) {
+                                                self.listItemStore.shoppingListItems[matchingIndex].isChecked.toggle()
+                                                      }
+                                        }
                                     if self.goodsList.contains(item.itemName){
                                         NavigationLink(destination: ProductCountryView(sat: sweatAndToil, good: item.itemName, origin: "", brand: brandObj)) {
                                             HStack{
                                                 Text(item.itemName)
-                                                Image(systemName: "exclamationmark.triangle.fill")
-                                                Text("Tap for more info")
-                                                Image(systemName: "arrow.right")
+                                                Image(systemName: "exclamationmark.triangle.fill").foregroundColor(.yellow)
+                                                //Text("Tap for more info")
+                                                //Image(systemName: "arrow.right")
                                             }
                                         }
-                                    }else {
-                                        Text(item.itemName)
-                                        }
+                                    }
+                                    else {Text(item.itemName)}
+                                }
                                     }.onMove(perform: self.move)
                                     .onDelete(perform: self.delete)
+                                    
                                 }.navigationBarTitle("Shopping list")
                                 .navigationBarItems(trailing: EditButton())
                             }

@@ -64,6 +64,7 @@
 		E97D460B25EB244900AE47B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E97D460A25EB244900AE47B0 /* Preview Assets.xcassets */; };
 		E9814F9725ED675F0050AB35 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9814F9625ED675F0050AB35 /* DataStore.swift */; };
 		E981502425F1C46D0050AB35 /* CarBode in Frameworks */ = {isa = PBXBuildFile; productRef = E981502325F1C46D0050AB35 /* CarBode */; };
+		E9A02DEC2609330200513878 /* SwipeCell in Frameworks */ = {isa = PBXBuildFile; productRef = E9A02DEB2609330200513878 /* SwipeCell */; };
 		E9C1B44226082AB300FF163A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9C1B44126082AB300FF163A /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -136,6 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				219E44BA93C7B6EB936BED63 /* Pods_shopaware.framework in Frameworks */,
+				E9A02DEC2609330200513878 /* SwipeCell in Frameworks */,
 				E981502425F1C46D0050AB35 /* CarBode in Frameworks */,
 				E9422D4025F2000A00DF7EDD /* CodeScanner in Frameworks */,
 			);
@@ -311,6 +313,7 @@
 			packageProductDependencies = (
 				E981502325F1C46D0050AB35 /* CarBode */,
 				E9422D3F25F2000A00DF7EDD /* CodeScanner */,
+				E9A02DEB2609330200513878 /* SwipeCell */,
 			);
 			productName = shopaware;
 			productReference = E97D460025EB244700AE47B0 /* shopaware.app */;
@@ -342,6 +345,7 @@
 			packageReferences = (
 				E981502225F1C46D0050AB35 /* XCRemoteSwiftPackageReference "CarBode-Barcode-Scanner-For-SwiftUI" */,
 				E9422D3E25F2000A00DF7EDD /* XCRemoteSwiftPackageReference "CodeScanner" */,
+				E9A02DEA2609330200513878 /* XCRemoteSwiftPackageReference "SwipeCell" */,
 			);
 			productRefGroup = E97D460125EB244700AE47B0 /* Products */;
 			projectDirPath = "";
@@ -672,6 +676,14 @@
 				kind = branch;
 			};
 		};
+		E9A02DEA2609330200513878 /* XCRemoteSwiftPackageReference "SwipeCell" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/EnesKaraosman/SwipeCell";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -684,6 +696,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E981502225F1C46D0050AB35 /* XCRemoteSwiftPackageReference "CarBode-Barcode-Scanner-For-SwiftUI" */;
 			productName = CarBode;
+		};
+		E9A02DEB2609330200513878 /* SwipeCell */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9A02DEA2609330200513878 /* XCRemoteSwiftPackageReference "SwipeCell" */;
+			productName = SwipeCell;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

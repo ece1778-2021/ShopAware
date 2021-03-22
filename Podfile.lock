@@ -352,6 +352,7 @@ PODS:
   - SDWebImage/Core (5.10.3)
   - SDWebImageSwiftUI (1.5.0):
     - SDWebImage (~> 5.7)
+  - SwiftSoup (2.3.2)
   - URLImage (2.2.0):
     - URLImage/Common (= 2.2.0)
     - URLImage/DownloadManager (= 2.2.0)
@@ -378,6 +379,7 @@ DEPENDENCIES:
   - Firebase/Storage
   - GoogleMLKit/BarcodeScanning
   - SDWebImageSwiftUI
+  - SwiftSoup
   - URLImage
 
 SPEC REPOS:
@@ -407,6 +409,7 @@ SPEC REPOS:
     - Protobuf
     - SDWebImage
     - SDWebImageSwiftUI
+    - SwiftSoup
     - URLImage
 
 SPEC CHECKSUMS:
@@ -435,8 +438,9 @@ SPEC CHECKSUMS:
   Protobuf: 0cde852566359049847168e51bd1c690e0f70056
   SDWebImage: e378178472b735e84b007bfb55514c97948a0598
   SDWebImageSwiftUI: 43687ffe232ddd33fe0659498b7ca9884fdd6b35
+  SwiftSoup: f97bc4e988c7729d6457f9642f974c617a6e2510
   URLImage: d58d7fa82e466c7576f2aea4f2113251a7a38ee9
 
-PODFILE CHECKSUM: 67fc3a96f549f21d68533fc78231acdabcec62c1
+PODFILE CHECKSUM: d8b754eec0a1879b7fe6762cf3b6e393b854cca0
 
 COCOAPODS: 1.10.1

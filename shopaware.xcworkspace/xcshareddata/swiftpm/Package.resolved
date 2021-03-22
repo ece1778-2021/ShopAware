@@ -18,6 +18,15 @@
           "revision": "a2144ddaa7c43a6ee00873edd4cc7815ad97942f",
           "version": "1.0.7"
         }
+      },
+      {
+        "package": "SwipeCell",
+        "repositoryURL": "https://github.com/EnesKaraosman/SwipeCell",
+        "state": {
+          "branch": null,
+          "revision": "1db897152f2780f4886e0f1fc884766735a88f17",
+          "version": "0.1.2"
+        }
       }
     ]
   },
