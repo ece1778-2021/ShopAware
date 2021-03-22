@@ -42,9 +42,11 @@ struct ContentView: View {
     @State var sweatAndToil: SweatAndToil = SweatAndToil()
     @State var goodsList: [String] = []
     
+    @State private var isActiveInfo = false
+    
     let defaults = UserDefaults.standard
     
-    @State var brandObj: Brand = Brand(name: "", praises: [], critisims:[], information:[], rating:"")
+    @State var brandObj: Brand = Brand(name: "", praises: [], critisims:[], information:[], rating:"", image_url: "")
 
     init() {
         let idData = defaults.object(forKey: "shoppingListID") as? [String] ?? []
@@ -93,122 +95,138 @@ struct ContentView: View {
     }
     
     var body: some View {
-        ZStack{
-            VStack {
-                VStack(spacing: 4){
-                    HStack(spacing: 0){
-                        Text("Shop")
-                            .font(.system(size: 35, weight: .heavy))
-                            .foregroundColor(.purple)
-                        Text("Aware")
-                            .font(.system(size: 35, weight: .heavy))
-                            .foregroundColor(.orange)
-                    }
-                }.padding(.top)
-                Picker("", selection: $selection) {
-                    Image(systemName: "cart.fill").tag(0)
-                    Image(systemName: "barcode.viewfinder").tag(1)
-                }.pickerStyle(SegmentedPickerStyle()).padding(.horizontal)
+        NavigationView {
+            ZStack{
+                VStack {
+                    VStack(spacing: 4){
+                        ZStack {
+                            HStack(spacing: 0){
+                                Text("Shop")
+                                    .font(.system(size: 35, weight: .heavy))
+                                    .foregroundColor(.purple)
+                                Text("Aware")
+                                    .font(.system(size: 35, weight: .heavy))
+                                    .foregroundColor(.orange)
+                            }
+                            HStack(spacing: 0) {
+                                Spacer()
+                                NavigationLink(destination: InformationView(), isActive: $isActiveInfo) {
+                                    Button(action: {
+                                        self.isActiveInfo = true
+                                    }) {
+                                        Image(systemName: "info.circle")
+                                    }.padding().imageScale(.large)
+                                }
                                 
-                
-                if selection == 0 { // Shopping list
-                    NavigationView{
-                        VStack {
-                            searchBar.padding()
-                            List {
-                                ForEach(self.listItemStore.shoppingListItems) {
-                                    item in
-                                    if self.goodsList.contains(item.itemName){
-                                    //if item.itemName == "Tea"{
-                                        NavigationLink(destination: ProductCountryView(sat: sweatAndToil, good: item.itemName, origin: "", brand: brandObj)) {
-                                            HStack{
-                                                Text(item.itemName)
-                                                Image(systemName: "exclamationmark.triangle.fill")
-                                                Text("Tap for more info")
-                                                Image(systemName: "arrow.right")
+                            }
+                        }
+                    }.padding(.top)
+                    Picker("", selection: $selection) {
+                        Image(systemName: "cart.fill").tag(0)
+                        Image(systemName: "barcode.viewfinder").tag(1)
+                    }.pickerStyle(SegmentedPickerStyle()).padding(.horizontal)
+                                    
+                    
+                    if selection == 0 { // Shopping list
+                        NavigationView{
+                            VStack {
+                                searchBar.padding()
+                                List {
+                                    ForEach(self.listItemStore.shoppingListItems) {
+                                        item in
+                                        if self.goodsList.contains(item.itemName){
+                                        //if item.itemName == "Tea"{
+                                            NavigationLink(destination: ProductCountryView(sat: sweatAndToil, good: item.itemName, origin: "", brand: brandObj)) {
+                                                HStack{
+                                                    Text(item.itemName)
+                                                    Image(systemName: "exclamationmark.triangle.fill")
+                                                    Text("Tap for more info")
+                                                    Image(systemName: "arrow.right")
+                                                }
                                             }
                                         }
-                                    }
-                                        else {
-                                            Text(item.itemName)
-                                    }
-                                }.onMove(perform: self.move)
-                                .onDelete(perform: self.delete)
-                            }.navigationBarTitle("Shopping list")
-                            .navigationBarItems(trailing: EditButton())
-                        }
-                    }.onAppear{
-                        self.createGoodsList()
-                    }
-                }
-                
-                else { // Barcode scanner
-                    NavigationView{
-                        VStack {
-                            Button(action: {
-                                self.torchIsOn.toggle() //Toggle On/Off
-                            }) {
-                                HStack{
-                                Text("Toggle torch")
-                                }
+                                            else {
+                                                Text(item.itemName)
+                                        }
+                                    }.onMove(perform: self.move)
+                                    .onDelete(perform: self.delete)
+                                }.navigationBarTitle("Shopping list")
+                                .navigationBarItems(trailing: EditButton())
                             }
-                            Spacer()
-                            CBScanner(
-                                supportBarcode: .constant([.ean8, .ean13]), //Set type of barcode you want to scan
-                                torchLightIsOn: $torchIsOn, scanInterval: .constant(5.0) // Bind a Bool to enable/disable torch light
-                                ){
-                                    //When the scanner found a barcode
-                                    print("BarCodeType =",$0.type.rawValue, "Value =",$0.value)
-                                    barcode_value = $0.value
-                                    BarcodeApi.fetchProduct(barcode: barcode_value) { (keywords, brand, origins) in
-                                        if brand == "" {
-                                            self.barcodeItemString = keywords
-                                            self.barCodeOrigins = origins
-                                        } else {
-                                            WebScraper.getInitiatives(company: brand) { praises, critisims, information, rating in
-                                                print("Here")
-                                                print(brand)
-                                                print(rating)
+                        }.onAppear{
+                            self.createGoodsList()
+                        }
+                    }
+                    
+                    else { // Barcode scanner
+                        NavigationView{
+                            VStack {
+                                Button(action: {
+                                    self.torchIsOn.toggle() //Toggle On/Off
+                                }) {
+                                    HStack{
+                                    Text("Toggle torch")
+                                    }
+                                }
+                                Spacer()
+                                CBScanner(
+                                    supportBarcode: .constant([.ean8, .ean13]), //Set type of barcode you want to scan
+                                    torchLightIsOn: $torchIsOn, scanInterval: .constant(5.0) // Bind a Bool to enable/disable torch light
+                                    ){
+                                        //When the scanner found a barcode
+                                        print("BarCodeType =",$0.type.rawValue, "Value =",$0.value)
+                                        barcode_value = $0.value
+                                        BarcodeApi.fetchProduct(barcode: barcode_value) { (keywords, brand, origins, image_url) in
+                                            if brand == "" {
                                                 self.barcodeItemString = keywords
                                                 self.barCodeOrigins = origins
-                                                self.barcodeBrand = brand
-                                                
-                                                self.brandObj = Brand(name: brand, praises:praises, critisims: critisims, information: information, rating: rating)
+                                            } else {
+                                                WebScraper.getInitiatives(company: brand) { praises, critisims, information, rating in
+                                                    print("Here")
+                                                    print(brand)
+                                                    print(rating)
+                                                    self.barcodeItemString = keywords
+                                                    self.barCodeOrigins = origins
+                                                    self.barcodeBrand = brand
+                                                    
+                                                    self.brandObj = Brand(name: brand, praises:praises, critisims: critisims, information: information, rating: rating, image_url: image_url)
+                                                }
                                             }
+                                            //self.isShowingProductCountry = true
                                         }
-                                        //self.isShowingProductCountry = true
+                                        
                                     }
-                                    
-                                }
-                                onDraw: {
-                                    //print("Preview View Size = \($0.cameraPreviewView.bounds)")
-                                    //print("Barcode Corners = \($0.corners)")
-                                    //print(barcode_value)
+                                    onDraw: {
+                                        //print("Preview View Size = \($0.cameraPreviewView.bounds)")
+                                        //print("Barcode Corners = \($0.corners)")
+                                        //print(barcode_value)
 
-                                    //line width
-                                    let lineWidth = 2
+                                        //line width
+                                        let lineWidth = 2
 
-                                    //line color
-                                    let lineColor = UIColor.red
+                                        //line color
+                                        let lineColor = UIColor.red
 
-                                    //Fill color with opacity
-                                    //You also can use UIColor.clear if you don't want to draw fill color
-                                    let fillColor = UIColor(red: 0, green: 1, blue: 0.2, alpha: 0.4)
+                                        //Fill color with opacity
+                                        //You also can use UIColor.clear if you don't want to draw fill color
+                                        let fillColor = UIColor(red: 0, green: 1, blue: 0.2, alpha: 0.4)
 
-                                    //Draw box
-                                    $0.draw(lineWidth: CGFloat(lineWidth), lineColor: lineColor, fillColor: fillColor)
-                                }
-                        }.navigationBarTitle("Barcode scanner")
+                                        //Draw box
+                                        $0.draw(lineWidth: CGFloat(lineWidth), lineColor: lineColor, fillColor: fillColor)
+                                    }
+                            }.navigationBarTitle("Barcode scanner")
+                        }
                     }
                 }
-            }
-        }.sheet(isPresented: Binding<Bool>(get: { self.barcodeItemString != "" }, set: { _ in }), onDismiss: {
-            self.barcodeItemString = ""
-            self.barCodeOrigins = ""
-            self.barcodeBrand = ""
-            self.brandObj = Brand(name: "", praises: [], critisims:[], information:[], rating:"")
-        }) {
-            ProductCountryView(sat: sweatAndToil, good: self.barcodeItemString, origin: self.barCodeOrigins, brand: brandObj)
+            }.sheet(isPresented: Binding<Bool>(get: { self.barcodeItemString != "" }, set: { _ in }), onDismiss: {
+                self.barcodeItemString = ""
+                self.barCodeOrigins = ""
+                self.barcodeBrand = ""
+                self.brandObj = Brand(name: "", praises: [], critisims:[], information:[], rating:"", image_url: "")
+            }) {
+                ProductCountryView(sat: sweatAndToil, good: self.barcodeItemString, origin: self.barCodeOrigins, brand: brandObj)
+            }.navigationBarTitle("")
+            .navigationBarHidden(true)
         }
     }
 }
@@ -216,7 +234,7 @@ struct ContentView: View {
 
 class BarcodeApi {
     static var DOMAIN_URL = "https://world.openfoodfacts.org/api/v0/product/"
-    static func fetchProduct(barcode: String, completionHandler: @escaping (String, String, String) -> Void) {
+    static func fetchProduct(barcode: String, completionHandler: @escaping (String, String, String, String) -> Void) {
         let url = URL(string: DOMAIN_URL + barcode + ".json")!
         let task = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
           if let error = error {
@@ -238,7 +256,7 @@ class BarcodeApi {
                 // Added this to make sure that app doesn't crash when product isn't found.
                 // Will use this to display a message to user.
                 if myJson ["status_verbose"] as! String == "product not found"{
-                    completionHandler("Product not found", "Product not found", "Product not found")
+                    completionHandler("Product not found", "Product not found", "Product not found", "")
                 }
                 else{
                 let product = myJson["product"] as! NSDictionary
@@ -250,8 +268,9 @@ class BarcodeApi {
                 let name_en = product["name_en"] as? String ?? ""
                 let categories = product["categories"] as? String ?? ""
                 let origins = product["origins"] as? String ?? ""
+                let image_url = product["image_url"] as? String ?? ""
                 let keywords = product_name + " " + product_name_en + " " + product_brands + " " + categories_old + " " + name_en + " " + categories
-                completionHandler(keywords, product_brands, origins)
+                completionHandler(keywords, product_brands, origins, image_url)
                 }
                 
             } catch {

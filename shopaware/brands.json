@@ -1,0 +1,94 @@
+[
+  {
+    "name": "Nestle",
+    "logo": "nestle",
+    "brands": ["Cerelac", "Gerber", "NaturNes", "Nestlé Pure Life", "Perrier", "Poland Spring", "S.Pellegrino", "Cheerios", "Fitness", "Lion", "Nesquik Cereal", "Aero", "Cailler", "KitKat", "Milkybar", "Nestlé Les Recettes de l'Atelier", "Orion", "Quality Street", "Smarties", "Toll House", "Nescafé", "Nescafé 3 in 1", "Nescafé Cappuccino", "Nescafé Classic", "Nescafé Decaff", "Nescafé Dolce Gusto", "Nescafé Gold", "Nespresso", "Buitoni", "Herta", "Hot Pockets", "Lean Cuisine", "Maggi", "Stouffer's", "Thomy", "Carnation", "Coffee-Mate", "La Laitière", "Nido", "Nesquik", "Nestea", "Chef", "Chef-Mate", "Maggi", "Milo", "Minor’s", "Nescafé", "Sjora", "Lean Cuisine", "Stouffer's", "Boost", "Nutren Junior", "Peptamen", "Resource", "Dreyer’s", "Extrême", "Häagen-Dazs", "Mövenpick", "Nestlé Ice Cream", "Alpo", "Bakers Complete", "Beneful", "Cat Chow", "Chef Michael’s Canine Creations", "Dog Chow", "Fancy Feast", "Felix", "Friskies", "Gourmet", "Purina", "Purina ONE", "Pro Plan"],
+    "report": "",
+    "lawsuits": [
+      {
+        "name": "Doe v. Nestle",
+        "link": "https://www.washingtonpost.com/business/2020/12/01/cocoa-supreme-court-child-labor/"
+      },
+      {
+          "name": "Walker v. Nestle",
+          "link": "https://blog.counselfinancial.com/nestl%C3%A9-faces-allegations-of-child-slavery-in-cocoa-farms"
+      },
+      {
+          "name": "New complaint filed in feb. 2021:",
+          "link": "https://www.bloomberg.com/news/articles/2021-02-12/mars-nestle-among-companies-named-in-cocoa-labor-abuse-suit"
+      },
+      {
+          "name": "Barber et al v. Nestlé USA, INC. and Nestlé Purina Petcare co.,: ",
+          "link": ""
+      }
+    ],
+    "initiatives":
+    [
+        "Nestle Cocoa Plan "
+    ],
+    "ranking": "F"
+  },
+  {
+    "name": "Pepsi Co",
+    "logo": "pepsi",
+    "brands": ["Pepsi", "Lays", "Doritos", "Mountain Dew", "Quaker Oats", "Gatorade", "Tropicana", "Lipton", "Aquafina", "Ruffles", "Cheetos", "Tostitos", "Brisk", "Fritos", "7-Up", "Miranda", "Walkers"],
+    "report": "",
+    "lawsuits": [],
+    "initiatives": [],
+    "ranking": ""
+  },
+  {
+    "name": "Unilever",
+    "logo": "unilever",
+    "brands": [],
+    "report": "",
+    "lawsuits": [],
+    "initiatives": [],
+    "ranking": ""
+  },
+  {
+    "name": "Kraft Heinz co.",
+    "logo": "kraft",
+    "brands": [],
+    "report": "",
+    "lawsuits": [],
+    "initiatives": [],
+    "ranking": ""
+  },
+  {
+    "name": "Mars",
+    "logo": "mars",
+    "brands": [],
+    "report": "",
+    "lawsuits": [],
+    "initiatives": [],
+    "ranking": ""
+  },
+  {
+    "name": "Dole",
+    "logo": "dole",
+    "brands": [],
+    "report": "",
+    "lawsuits": [],
+    "initiatives": [],
+    "ranking": ""
+  },
+  {
+    "name": "Mondelez International",
+    "logo": "mondelez",
+    "brands": [],
+    "report": "",
+    "lawsuits": [],
+    "initiatives": [],
+    "ranking": ""
+  },
+  {
+    "name": "Hershey",
+    "logo": "hershey",
+    "brands": [],
+    "report": "",
+    "lawsuits": [],
+    "initiatives": [],
+    "ranking": ""
+  }
+]
