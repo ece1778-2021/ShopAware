@@ -14,6 +14,6 @@ pod 'URLImage'
 pod 'SDWebImageSwiftUI'
 pod 'GoogleMLKit/BarcodeScanning'
 
-
+pod 'SwiftSoup'
 
 end
