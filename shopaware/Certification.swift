@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Certification {
+class Certification: Codable {
     var name: String
     var old_seal: String
     var current_seal: String

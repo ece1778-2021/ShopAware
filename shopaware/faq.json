@@ -1,0 +1,38 @@
+[
+    {
+      "field": "cl",
+      "question": "What is child labour?",
+      "answer":
+      "Not all work performed by children should be classified as child labour. According to the International Labor Organization (ILO), child labour can be defined as work that deprives children of their childhood, their potential and their dignity, and that is harmful to physical and mental development. For instance:\n\tCombining school with long and intense hours of work;\n\tWork that causes a child to leave school prematurely;\n\tWork that prevents a child from attending school.\n\nThe age of the child must also be considered. ILO Convention No. 138 concerning Minimum Age for Admission to Employment specifies that minimum age for work should not be below the age for finishing compulsory schooling, which is generally 15."
+    },
+    {
+       "field": "fl",
+      "question": "What is forced labour?",
+      "answer":  "According to ILO Convention No. 29 on Forced Labour, the definition of forced or compulsory labour consists of all work or service which is exacted from any person under the threat of a penalty and for which the person has not offered himself or herself voluntarily. Voluntariness refers to giving an informed consent to take a job and having the freedom to leave at any time. The definition of forced labour ecompasses human trafficking abuses or what is today referred to as “modern slavery”. It can be imposed by State authorities, by private enterprises or by individuals.\n\nForced labour is however different from bad or substandard working conditions. Indicators of forced labour include cases of restrictions on workers’ freedom of movement, the withholding of wages or identity documents such as a passeport, physical or sexual violence, threats and intimidation, for example threats of deportation, or fraudulent debt, such as for travelling costs or living costs, from which workers cannot escape."
+    },
+    {
+      "field": "cl",
+      "question": "What are the Worst Forms of Child Labour?",
+      "answer":  "There is a subcategory of child labour, reffered to by the ILO as the worst forms of child labour. It is defined as follows:  \n\tall forms of slavery or practices similar to slavery, such as the sale and trafficking of children, debt bondage and serfdom and forced or compulsory labour, including forced or compulsory recruitment of children for use in armed conflict;\tthe use, procuring or offering of a child for prostitution, for the production of pornography or for pornographic performances;\tthe use, procuring or offering of a child for illicit activities, in particular for the production and trafficking of drugs as defined in the relevant international treaties;\twork which, by its nature or the circumstances in which it is carried out, is likely to harm the health, safety or morals of children. \n\nIn global supply chains, work that by its nature, is likely to harm the health or safety of children, is widespread. In the agricultural sector in particular, this type of hazardous work includes performing work with dangerous machinery, equipment and tools, work that involves the manual handling or transport of heavy loads or work in an unhealthy environment which may expose children to hazardous substances, agents or processes, or to temperatures, noise levels, or vibrations damaging to their health."
+    },
+    {
+      "field": "cl",
+      "question": "How are countries dealing with child labour?",
+      "answer":  "ILO Convention No. 182 on the worst forms of child labour requires signatories states to set the elimination of the worst forms of child labour as a priority in their respective countries. This convention has been almost universally ratified and therefore, virtually all countries have enacted laws and policies that protect children from these practices. Despite the international and national legal frameworks, the worst forms of child labour are still rampant in some countries. Indeed, child labour is a multidimensional issue deeply rooted in poverty and the enforcement of laws often falls short in practice."
+    },
+    {
+      "field": "fl",
+      "question": "How are countries dealing with forced labour?",
+      "answer":  "The prohibition against forced labour is an internationally recognized human right that all countries must respect. In addition, ILO Convention No. 29 and ILO Convention no. 105 (the second convention on forced labour) have been universally ratified, meaning that countries have an obligation to respect their provisions."
+    },
+    {
+      "field": "cl",
+      "question": "How are corporations involved in child labour?",
+      "answer":  "Large corporations that displace part of their operations and source raw materials in these countries thus often find children working in their supply chain. While some of them take serious actions to mitigate and remedy this situation, some also close a blind eye to this situation or may even wilfully contribute to the perpetuation of this system in order to benefit from this cheap labour. \n\nIt is important to mention that most corporations’ internal codes of conduct prohibit the use of child labor as part of their “corporate social responsibility” program. They often require the corporations’ suppliers to adhere to these standards. However, in practice, these boiler-plate clauses in contracts are rarely enforced, audited or verified. \n\nIn addition, these corporations usually set up other public facing initiatives aimed at combating these issues. However, most large food companies do not trace a large proportion of their raw material. Therefore, these initiatives are majoritarily geared at marketing purposes rather than bridging the gap with living income. "
+    },
+    {
+      "field": "fl",
+      "question": "How are corporations involved in forced labour?",
+      "answer":  "The ILO estimates that 20.9 million people are victims of forced labour in the world. 90 percent of these people are exploited by private individuals and enterprises. \n\nLarge corporations often find people working in their supply chain who are in situations of forced labour. While some of them take actions to mitigate and remedy this situation, some also close a blind eye or may sometimes wilfully contribute to the perpetuation of this system and benefit from this cheap or free labour with impunity. Most corporations’ internal codes of conduct prohibit the use of forced labour as part of their “corporate social responsibility” program. They often require the corporations’ suppliers to adhere to these standards. However, in practice, these boiler-plate clauses in contracts are rarely enforced, audited or verified. "
+    }
+]

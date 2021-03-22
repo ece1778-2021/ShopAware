@@ -53,8 +53,16 @@ struct ProductCountryView: View {
             if  self.brand.name != "" {
                 VStack{
                     List{
-                        Text("Brand: " + brand.name).font(.system(size:14, weight: .heavy))
-                        Text("Rating: " + brand.rating).font(.system(size:14, weight: .heavy))
+                        HStack {
+                            VStack {
+                                Text("Brand: " + brand.name).font(.system(size:14, weight: .heavy))
+                                Text("Rating: " + brand.rating).font(.system(size:14, weight: .heavy))
+                            }
+                            AsyncImage(url: URL(string: brand.image_url)!,
+                                       placeholder: { Text("Loading ...") },
+                                       image: { Image(uiImage: $0).resizable() })
+                                .frame(idealHeight: 200).aspectRatio(contentMode: .fit) // 2:3 aspect ratio
+                        }
                         Text("Praises").font(.system(size:14, weight: .heavy))
                         ForEach(self.brand.praises, id: \.self) { praise in
                             Text(praise).font(.system(size:14))

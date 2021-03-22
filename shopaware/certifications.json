@@ -6,7 +6,7 @@
     "objectives":
         [
             {
-                "title": "Objective",
+                "title": "",
                 "body": "UTZ certified products are grown in accordance with guidelines for better farming methods and working conditions, as well as better care for nature and future generations. ",
                 "link": "https://utz.org/what-we-offer/certification/the-standard/"
             },
@@ -26,12 +26,12 @@
             {
                 "title": "Payment of a premium. ",
                 "body": "Producers are paid a premium for their products if they abide by the labour and environmental guidelines set in the UTZ and Rainforest Alliance standards.",
-                "link": " "
+                "link": ""
             },
             {
                 "title": "Training & awareness.",
                 "body": "Producers receive training on environmental and labour issues and become aware of the good practices in these areas that they must implement to meet and maintain their certifications. This can benefit the environment and the workers. ",
-                "link": " "
+                "link": ""
             },
             {
                 "title": "Empowerment of women and indigenous communities.",
@@ -77,7 +77,7 @@
             {
                 "title": "New sustainability investment premium. ",
                 "body": "There will be a required payment of a sustainability investment premium to farmers in addition to the regular premium. It is a  mandatory cash or in-kind investment from buyers of UTZ/ Rainforest Alliance Certified products to farm certificate holders for the specific purpose of helping them reach compliance with the Sustainable Agriculture Standard.",
-                "link": "https://www.rainforest-alliance.org/business/responsible-sourcing/supply-chain-certification/faq-2020-certification-program-supply-chain-requirements/ "
+                "link": "https://www.rainforest-alliance.org/business/responsible-sourcing/supply-chain-certification/faq-2020-certification-program-supply-chain-requirements/"
             },
             {
                 "title": "Minimum amount for the regular premium.",
@@ -94,7 +94,7 @@
           {
               "title": "",
               "body": "Fairtrade aims to promote sustainable development and reduce poverty through fairer trade. The main goals of Fairtrade are making changes to the conventional trading system that aim to benefit disadvantaged small producers and workers and increasing their access to markets. These actions can lead to improvements in small producers’ and workers’ social and economic well-being, as well as to their empowerment, and to environmental sustainability.",
-              "link": "https://www.fairtrade.net/about/what-is-fairtrade "
+              "link": "https://www.fairtrade.net/about/what-is-fairtrade"
           }
           ],
       "benefits": [
