@@ -64,6 +64,7 @@
 		E97D460B25EB244900AE47B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E97D460A25EB244900AE47B0 /* Preview Assets.xcassets */; };
 		E9814F9725ED675F0050AB35 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9814F9625ED675F0050AB35 /* DataStore.swift */; };
 		E981502425F1C46D0050AB35 /* CarBode in Frameworks */ = {isa = PBXBuildFile; productRef = E981502325F1C46D0050AB35 /* CarBode */; };
+		E9C1B44226082AB300FF163A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9C1B44126082AB300FF163A /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -126,6 +127,7 @@
 		E97D460A25EB244900AE47B0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E97D460C25EB244900AE47B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9814F9625ED675F0050AB35 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		E9C1B44126082AB300FF163A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +250,7 @@
 		E97D45F725EB244700AE47B0 = {
 			isa = PBXGroup;
 			children = (
+				E9C1B44126082AB300FF163A /* GoogleService-Info.plist */,
 				E97D460225EB244700AE47B0 /* shopaware */,
 				E97D460125EB244700AE47B0 /* Products */,
 				D3BD80D049A8BA78540CC465 /* Pods */,
@@ -356,6 +359,7 @@
 			files = (
 				96CE400E25F45F680037E3A4 /* legalStandards.json in Resources */,
 				E97D460B25EB244900AE47B0 /* Preview Assets.xcassets in Resources */,
+				E9C1B44226082AB300FF163A /* GoogleService-Info.plist in Resources */,
 				96CE401325F45F690037E3A4 /* enforcements.json in Resources */,
 				960BBE572607BF8500292D09 /* certifications.json in Resources */,
 				96CE400D25F45F680037E3A4 /* sectors.json in Resources */,
