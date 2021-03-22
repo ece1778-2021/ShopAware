@@ -143,7 +143,7 @@ struct ContentView: View {
                                 ForEach(self.listItemStore.shoppingListItems) {
                                     item in
                                     if self.goodsList.contains(item.itemName){
-                                    NavigationLink(destination: ProductCountryView(sat: sweatAndToil, good: item.itemName)) {
+                                        NavigationLink(destination: ProductCountryView(sat: sweatAndToil, good: item.itemName, origin: "", brand: brandObj)) {
                                             HStack{
                                                 Text(item.itemName)
                                                 Image(systemName: "exclamationmark.triangle.fill")
@@ -151,8 +151,8 @@ struct ContentView: View {
                                                 Image(systemName: "arrow.right")
                                             }
                                         }
-                                            else {
-                                                Text(item.itemName)
+                                    }else {
+                                        Text(item.itemName)
                                         }
                                     }.onMove(perform: self.move)
                                     .onDelete(perform: self.delete)
