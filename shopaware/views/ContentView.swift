@@ -6,18 +6,14 @@
 //
 
 import SwiftUI
-//import Firebase
 import Foundation
 import FirebaseAuth
 import FirebaseStorage
 import FirebaseFirestore
 import SDWebImageSwiftUI
-//import Combine
-//import MLKitBarcodeScanning
 import CarBode
 import AVFoundation
 import CodeScanner
-
 
 struct ContentView: View {
     // Shopping list variables
@@ -86,15 +82,17 @@ struct ContentView: View {
 
     var searchBar : some View {
         HStack {
-            TextField("Add a new item", text: self.$newListItem)
-            Button(action: self.addNewListItem, label: {Text("Add")})
+            TextField("+ Add a new item", text: self.$newListItem)
+            if self.newListItem != "" {
+                Button(action: self.addNewListItem, label: {Text("Add to list")})
+            }
         }
     }
     
     var body: some View {
         ZStack{
             VStack {
-                VStack(spacing: 4){
+                VStack(spacing: 0){
                     HStack(spacing: 0){
                         Text("Shop")
                             .font(.system(size: 35, weight: .heavy))
@@ -112,13 +110,22 @@ struct ContentView: View {
                 
                 if selection == 0 { // Shopping list
                     NavigationView{
-                        VStack {
+                        VStack(spacing: 0) {
                             searchBar.padding()
+                            if self.newListItem != "" {
+                                List(self.goodsList.filter{$0.lowercased().contains(self.newListItem.lowercased())}, id: \.self){i in
+                                    Button(action:{
+                                        self.newListItem = i
+                                        self.addNewListItem()
+                                        self.newListItem = ""
+                                    }){Text(i)}
+                                }.frame(height: UIScreen.main.bounds.height/4)
+                            }
+                            
                             List {
                                 ForEach(self.listItemStore.shoppingListItems) {
                                     item in
                                     if self.goodsList.contains(item.itemName){
-                                    //if item.itemName == "Tea"{
                                     NavigationLink(destination: ProductCountryView(sat: sweatAndToil, good: item.itemName)) {
                                             HStack{
                                                 Text(item.itemName)
