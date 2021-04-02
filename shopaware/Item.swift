@@ -45,7 +45,7 @@ class ShoppingListItem: Codable{
             }
 
             if i == 0  {
-                return "A"g
+                return "A"
             }else if i == 1 {
                 return "C"
             }else if i == 2 {

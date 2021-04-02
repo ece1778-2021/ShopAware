@@ -65,7 +65,9 @@ struct ProductCountryView: View {
                         Text("No").font(.system(size:14)).frame(width: small_width, alignment: .leading)
                         Text("No").font(.system(size:14)).frame(width: small_width, alignment: .leading)
                         Button("+") {
-                            let i = shoppingList.shoppingListItems.firstIndex(where: {$0.itemName.lowercased().trimmingCharacters(in: .whitespacesAndNewlines) == good.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)})
+                            print(good)
+                            print(shoppingList.shoppingListItems)
+                            let i = shoppingList.shoppingListItems.firstIndex(where: {$0.itemName == good})
                             shoppingList.shoppingListItems[i!].shoppingListItem.setCountryGood(countryGood: CountryGood(id: "-1", assessment: Assessment(id: "-1", country: Country(id: "-1", name: "Other Country", region: Region(id: "-1", name: "-1"), num_territories: "-1"), year: "-1", advancement_level: AdvancementLevel(id: "-1", name: "-1"), description: "-1"), year: "-1", country: Country(id: "-1", name: "Other Country", region: Region(id: "-1", name: "-1"), num_territories: "-1"), good: Good(id: "-1", sector: Sector(id: "-1", name: "-1"), name: good), region_name: "-1", child_labor: "No", forced_labor: "No", forced_child_labor: "No"))
                             saveList()
                         }
@@ -80,7 +82,10 @@ struct ProductCountryView: View {
                                 Text("Brand: " + brand.name).font(.system(size:14, weight: .heavy))
                                 Text("Rating: " + brand.rating).font(.system(size:14, weight: .heavy))
                                 Button("Add to Cart") {
-                                    shoppingList.shoppingListItems.append(ListItem(id: String(shoppingList.shoppingListItems.count + 1), itemName: good))
+                                    let x = shoppingList.shoppingListItems.firstIndex(where: {$0.itemName.lowercased().trimmingCharacters(in: .whitespacesAndNewlines) == good.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)})
+                                    if x == nil  {
+                                        shoppingList.shoppingListItems.append(ListItem(id: String(shoppingList.shoppingListItems.count + 1), itemName: good))
+                                    }
                                     let i = shoppingList.shoppingListItems.firstIndex(where: {$0.itemName.lowercased().trimmingCharacters(in: .whitespacesAndNewlines) == good.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)})
                                     shoppingList.shoppingListItems[i!].shoppingListItem.setBrand(brand: brand)
                                     saveList()
