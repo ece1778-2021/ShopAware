@@ -22,6 +22,8 @@
 		960BBE9226083D5E00292D09 /* Lawsuit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960BBE9126083D5E00292D09 /* Lawsuit.swift */; };
 		960BBE9526083FD500292D09 /* BrandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960BBE9426083FD500292D09 /* BrandView.swift */; };
 		960BBE9826084A8600292D09 /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960BBE9726084A8600292D09 /* AsyncImage.swift */; };
+		960BBEC2261170B900292D09 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960BBEC1261170B800292D09 /* Item.swift */; };
+		960BBECD2617B61700292D09 /* SavedItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960BBECC2617B61600292D09 /* SavedItemsView.swift */; };
 		96CE3F6125F444B50037E3A4 /* SweatAndToil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F6025F444B50037E3A4 /* SweatAndToil.swift */; };
 		96CE3F6F25F444E60037E3A4 /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F6725F444E60037E3A4 /* Region.swift */; };
 		96CE3F7025F444E60037E3A4 /* Good.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3F6825F444E60037E3A4 /* Good.swift */; };
@@ -86,6 +88,8 @@
 		960BBE9126083D5E00292D09 /* Lawsuit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lawsuit.swift; sourceTree = "<group>"; };
 		960BBE9426083FD500292D09 /* BrandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandView.swift; sourceTree = "<group>"; };
 		960BBE9726084A8600292D09 /* AsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
+		960BBEC1261170B800292D09 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		960BBECC2617B61600292D09 /* SavedItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedItemsView.swift; sourceTree = "<group>"; };
 		96CE3F6025F444B50037E3A4 /* SweatAndToil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SweatAndToil.swift; sourceTree = "<group>"; };
 		96CE3F6725F444E60037E3A4 /* Region.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
 		96CE3F6825F444E60037E3A4 /* Good.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Good.swift; sourceTree = "<group>"; };
@@ -149,6 +153,7 @@
 		96CE3FD825F459710037E3A4 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				E9814F9625ED675F0050AB35 /* DataStore.swift */,
 				96CE3FD925F459970037E3A4 /* apiModels */,
 				96CE3F6E25F444E60037E3A4 /* AdvancementLevel.swift */,
 				96CE3F6B25F444E60037E3A4 /* Assessment.swift */,
@@ -165,6 +170,7 @@
 				960BBE8826082D5400292D09 /* FAQ.swift */,
 				960BBE8E26083C8A00292D09 /* BrandHardcode.swift */,
 				960BBE9126083D5E00292D09 /* Lawsuit.swift */,
+				960BBEC1261170B800292D09 /* Item.swift */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -206,6 +212,7 @@
 				960BBE822608095700292D09 /* CertificationView.swift */,
 				960BBE9426083FD500292D09 /* BrandView.swift */,
 				960BBE9726084A8600292D09 /* AsyncImage.swift */,
+				960BBECC2617B61600292D09 /* SavedItemsView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -275,7 +282,6 @@
 				96CE3FE025F459E60037E3A4 /* views */,
 				96CE3FDA25F459B10037E3A4 /* network */,
 				96CE3FD825F459710037E3A4 /* models */,
-				E9814F9625ED675F0050AB35 /* DataStore.swift */,
 				E97D460325EB244700AE47B0 /* shopawareApp.swift */,
 				E97D460725EB244900AE47B0 /* Assets.xcassets */,
 				E97D460C25EB244900AE47B0 /* Info.plist */,
@@ -432,6 +438,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96CE3F7025F444E60037E3A4 /* Good.swift in Sources */,
+				960BBECD2617B61700292D09 /* SavedItemsView.swift in Sources */,
 				96CE3F8825F444F40037E3A4 /* CountryGoodAPI.swift in Sources */,
 				96CE3F6125F444B50037E3A4 /* SweatAndToil.swift in Sources */,
 				96CE3F8D25F444F40037E3A4 /* TerritoryAPI.swift in Sources */,
@@ -445,6 +452,7 @@
 				96CE3F7525F444E60037E3A4 /* Country.swift in Sources */,
 				96CE3F8A25F444F40037E3A4 /* RegionAPI.swift in Sources */,
 				96CE3F7225F444E60037E3A4 /* Territory.swift in Sources */,
+				960BBEC2261170B900292D09 /* Item.swift in Sources */,
 				96CE3F6F25F444E60037E3A4 /* Region.swift in Sources */,
 				960BBE8926082D5400292D09 /* FAQ.swift in Sources */,
 				96CE3F8425F444F40037E3A4 /* LegalStandardAPI.swift in Sources */,

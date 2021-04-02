@@ -40,18 +40,20 @@ struct ContentView: View {
     @State var goodsList: [String] = []
     
     @State private var isActiveInfo = false
+    @State private var isActiveSaved = false
+    
+    @State var redraw = false;
     
     let defaults = UserDefaults.standard
     
     @State var brandObj: Brand = Brand(name: "", praises: [], critisims:[], information:[], rating:"", image_url: "")
 
     init() {
-        let idData = defaults.object(forKey: "shoppingListID") as? [String] ?? []
-        let nameData = defaults.object(forKey: "shoppingListName") as? [String] ?? []
-        if !idData.isEmpty && !nameData.isEmpty {
-            for (index, _) in idData.enumerated() {
-                listItemStore.shoppingListItems.append(ListItem(id: String(idData[index]), itemName: nameData[index]))
-           }
+        if let savedList = defaults.object(forKey: "shoppingList") as? Data {
+            let decoder = JSONDecoder()
+            if let list = try? decoder.decode([ListItem].self, from: savedList) {
+                listItemStore.shoppingListItems = list
+            }
         }
     }
     
@@ -66,21 +68,96 @@ struct ContentView: View {
         listItemStore.shoppingListItems.append(ListItem(id: String(listItemStore.shoppingListItems.count + 1), itemName: newListItem))
         
         self.newListItem = ""
-        defaults.set(listItemStore.shoppingListItems.map{ $0.id}, forKey:"shoppingListID")
-        defaults.set(listItemStore.shoppingListItems.map{ $0.itemName}, forKey:"shoppingListName")
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(listItemStore.shoppingListItems) {
+            let defaults = UserDefaults.standard
+            defaults.set(encoded, forKey: "shoppingList")
+        }
  
     }
     
     func move(from source: IndexSet, to destination: Int){
         listItemStore.shoppingListItems.move(fromOffsets: source, toOffset: destination)
-        defaults.set(listItemStore.shoppingListItems.map{ $0.id}, forKey:"shoppingListID")
-        defaults.set(listItemStore.shoppingListItems.map{ $0.itemName}, forKey:"shoppingListName")
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(listItemStore.shoppingListItems) {
+            let defaults = UserDefaults.standard
+            defaults.set(encoded, forKey: "shoppingList")
+        }
     }
     
     func delete(at offsets: IndexSet) {
         listItemStore.shoppingListItems.remove(atOffsets: offsets)
-        defaults.set(listItemStore.shoppingListItems.map{ $0.id}, forKey:"shoppingListID")
-        defaults.set(listItemStore.shoppingListItems.map{ $0.itemName}, forKey:"shoppingListName")
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(listItemStore.shoppingListItems) {
+            let defaults = UserDefaults.standard
+            defaults.set(encoded, forKey: "shoppingList")
+        }
+    }
+    
+    func getRatingNum(rank: String) -> Double{
+        if rank == "A"{
+            return 5
+        }else if rank == "B" {
+            return 4
+        } else if rank == "C" {
+            return 3
+        } else if rank == "D" {
+            return 2
+        } else if rank == "F" {
+            return 1
+        }
+        return 0
+        
+    }
+    
+    func ratingToString(rating: Double) -> String {
+        if rating > 4 {
+            return "A"
+        } else if rating > 3 {
+            return  "B"
+        } else if rating > 2 {
+            return "C"
+        } else if rating > 1 {
+            return "D"
+        } else  {
+            return "F"
+        }
+    }
+    
+    func totalRating() -> String {
+        var total = 0.0
+        var count = 0
+        for item in self.listItemStore.shoppingListItems {
+            let num = getRatingNum(rank: item.shoppingListItem.getRank())
+            total = total + num
+            if num != 0 {
+                count = count + 1
+            }
+        }
+        let rating = total/Double(count)
+        return ratingToString(rating: rating)
+    }
+    
+    func saveShoppingList() {
+        if let savedList = defaults.object(forKey: "SavedShoppingList") as? Data {
+            let decoder = JSONDecoder()
+            if var list = try? decoder.decode([ListItemStore].self, from: savedList) {
+                list.append(self.listItemStore)
+                
+                let encoder = JSONEncoder()
+                if let encoded = try? encoder.encode(list) {
+                    let defaults = UserDefaults.standard
+                    defaults.set(encoded, forKey: "SavedShoppingList")
+                }
+                
+            }
+        }else {
+            let encoder = JSONEncoder()
+            if let encoded = try? encoder.encode([self.listItemStore]) {
+                let defaults = UserDefaults.standard
+                defaults.set(encoded, forKey: "SavedShoppingList")
+            }
+        }
     }
     
     var searchBar : some View {
@@ -107,7 +184,16 @@ struct ContentView: View {
                                     .foregroundColor(.orange)
                             }
                             HStack(spacing: 0) {
+                                NavigationLink(destination: SavedItemsView(currentShoppingList: self.listItemStore), isActive: $isActiveSaved) {
+                                    Button(action: {
+                                        self.isActiveSaved = true
+                                    }) {
+                                        Image(systemName: "bookmark.fill")
+                                    }.padding().imageScale(.large)
+                                }
+                                
                                 Spacer()
+                                
                                 NavigationLink(destination: InformationView(), isActive: $isActiveInfo) {
                                     Button(action: {
                                         self.isActiveInfo = true
@@ -115,7 +201,6 @@ struct ContentView: View {
                                         Image(systemName: "info.circle")
                                     }.padding().imageScale(.large)
                                 }
-                                
                             }
                         }
                     }.padding(.top)
@@ -150,25 +235,90 @@ struct ContentView: View {
                                                       }
                                         }
                                     if self.goodsList.contains(item.itemName){
-                                        NavigationLink(destination: ProductCountryView(sat: sweatAndToil, good: item.itemName, origin: "", brand: brandObj)) {
-                                            HStack{
-                                                Text(item.itemName)
-                                                Image(systemName: "exclamationmark.triangle.fill").foregroundColor(.yellow)
-                                                //Text("Tap for more info")
-                                                //Image(systemName: "arrow.right")
+                                        if let b = item.shoppingListItem.brand {
+                                            NavigationLink(destination: ProductCountryView(sat: sweatAndToil, good: item.itemName, origin: "", brand: b, shoppingList: self.listItemStore)) {
+                                                HStack{
+                                                    Text(item.itemName)
+                                                    Image(systemName: "exclamationmark.triangle.fill").foregroundColor(.yellow)
+                                                    Spacer()
+                                                    if let shoppingListBrand = item.shoppingListItem.brand {
+                                                        Text(shoppingListBrand.name);
+                                                        Text(item.shoppingListItem.getRank()).font(.system(size:14, weight: .heavy))
+                                                    }
+                                                    if let shoppingListCountryGood = item.shoppingListItem.countryGood {
+                                                        Text(shoppingListCountryGood.country.name);
+                                                        Text(item.shoppingListItem.getRank()).font(.system(size:14, weight: .heavy))
+                                                    }
+                                                    //Text("Tap for more info")
+                                                    //Image(systemName: "arrow.right")
+                                                }
+                                            }
+                                        }else {
+                                            NavigationLink(destination: ProductCountryView(sat: sweatAndToil, good: item.itemName, origin: "", brand: brandObj, shoppingList: self.listItemStore)) {
+                                                HStack{
+                                                    Text(item.itemName)
+                                                    Image(systemName: "exclamationmark.triangle.fill").foregroundColor(.yellow)
+                                                    Spacer()
+                                                    if let shoppingListBrand = item.shoppingListItem.brand {
+                                                        Text(shoppingListBrand.name);
+                                                        Text(item.shoppingListItem.getRank()).font(.system(size:14, weight: .heavy))
+                                                    }
+                                                    if let shoppingListCountryGood = item.shoppingListItem.countryGood {
+                                                        Text(shoppingListCountryGood.country.name);
+                                                        Text(item.shoppingListItem.getRank()).font(.system(size:14, weight: .heavy))
+                                                    }
+                                                    //Text("Tap for more info")
+                                                    //Image(systemName: "arrow.right")
+                                                }
                                             }
                                         }
                                     }
-                                    else {Text(item.itemName)}
+                                    else {
+                                        Text(item.itemName)
+                                    }
                                 }
-                                    }.onMove(perform: self.move)
-                                    .onDelete(perform: self.delete)
+                            }.onMove(perform: self.move)
+                            .onDelete(perform: self.delete)
+                                
+                                if self.listItemStore.shoppingListItems.filter{$0.shoppingListItem.getRank() != ""}.count != 0 {
+                                    HStack {
+                                        Text("Cart Rating: ")
+                                        Spacer()
+                                        Text(totalRating())
+                                    }
+                                }
+                                
+                                if self.listItemStore.shoppingListItems.count != 0 {
+                                    HStack {
+                                        Button(action: {}){
+                                            Text("Clear List")
+                                            
+                                        }.frame(minWidth: 0).onTapGesture {
+                                            self.listItemStore.shoppingListItems = []
+                                            let encoder = JSONEncoder()
+                                            if let encoded = try? encoder.encode(listItemStore.shoppingListItems) {
+                                                let defaults = UserDefaults.standard
+                                                defaults.set(encoded, forKey: "shoppingList")
+                                            }
+                                        }
+                                        
+                                        Spacer()
+                                        
+                                        Button(action: {}) {
+                                            Text("Save List")
+                                        }.frame(minWidth: 0).onTapGesture {
+                                            saveShoppingList()
+                                        }
+                                        
+                                    }
+                                }
                                     
-                                }.navigationBarTitle("Shopping list")
-                                .navigationBarItems(trailing: EditButton())
-                            }
+                        }.navigationBarTitle("Shopping list")
+                        .navigationBarItems(trailing: EditButton())
+                    }
                         }.onAppear{
                             self.createGoodsList()
+                            redraw.toggle()
                         }
                     }
                     
@@ -238,7 +388,7 @@ struct ContentView: View {
                 self.barcodeBrand = ""
                 self.brandObj = Brand(name: "", praises: [], critisims:[], information:[], rating:"", image_url: "")
             }) {
-                ProductCountryView(sat: sweatAndToil, good: self.barcodeItemString, origin: self.barCodeOrigins, brand: brandObj)
+                ProductCountryView(sat: sweatAndToil, good: self.barcodeItemString, origin: self.barCodeOrigins, brand: brandObj, shoppingList: self.listItemStore)
             }.navigationBarTitle("")
             .navigationBarHidden(true)
         }
