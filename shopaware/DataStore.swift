@@ -9,11 +9,30 @@ import Foundation
 import SwiftUI
 import Combine
 
-struct ListItem: Identifiable {
+class ListItem: Identifiable, Codable {
     var id = String()
     var itemName = String()
     // Add other features later
     var isChecked = false
+    var shoppingListItem = ShoppingListItem()
+    
+    init(id: String, itemName: String, isChecked: Bool, shoppingListItem: ShoppingListItem) {
+        self.id = id
+        self.itemName = itemName
+        self.isChecked = isChecked
+        self.shoppingListItem = shoppingListItem
+    }
+    
+    init(id: String, itemName: String, shoppingListItem: ShoppingListItem) {
+        self.id = id
+        self.itemName = itemName
+        self.shoppingListItem = shoppingListItem
+    }
+    
+    init(id: String, itemName: String) {
+        self.id = id
+        self.itemName = itemName
+    }
 }
 
 class ListItemStore : ObservableObject {
