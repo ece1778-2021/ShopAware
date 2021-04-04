@@ -236,7 +236,7 @@ struct ContentView: View {
                                         }
                                     if self.goodsList.contains(item.itemName){
                                         if let b = item.shoppingListItem.brand {
-                                            NavigationLink(destination: ProductCountryView(sat: sweatAndToil, good: item.itemName, origin: "", brand: b, shoppingList: self.listItemStore)) {
+                                            NavigationLink(destination: ProductCountryView(sat: sweatAndToil, good: item.itemName, origin: "", brand: b, shoppingList: self.listItemStore, barcodeString: $barcodeItemString)) {
                                                 HStack{
                                                     Text(item.itemName)
                                                     Image(systemName: "exclamationmark.triangle.fill").foregroundColor(.yellow)
@@ -254,7 +254,7 @@ struct ContentView: View {
                                                 }
                                             }
                                         }else {
-                                            NavigationLink(destination: ProductCountryView(sat: sweatAndToil, good: item.itemName, origin: "", brand: brandObj, shoppingList: self.listItemStore)) {
+                                            NavigationLink(destination: ProductCountryView(sat: sweatAndToil, good: item.itemName, origin: "", brand: brandObj, shoppingList: self.listItemStore, barcodeString: $barcodeItemString)) {
                                                 HStack{
                                                     Text(item.itemName)
                                                     Image(systemName: "exclamationmark.triangle.fill").foregroundColor(.yellow)
@@ -388,7 +388,7 @@ struct ContentView: View {
                 self.barcodeBrand = ""
                 self.brandObj = Brand(name: "", praises: [], critisims:[], information:[], rating:"", image_url: "")
             }) {
-                ProductCountryView(sat: sweatAndToil, good: self.barcodeItemString, origin: self.barCodeOrigins, brand: brandObj, shoppingList: self.listItemStore)
+                ProductCountryView(sat: sweatAndToil, good: self.barcodeItemString, origin: self.barCodeOrigins, brand: brandObj, shoppingList: self.listItemStore, barcodeString: $barcodeItemString)
             }.navigationBarTitle("")
             .navigationBarHidden(true)
         }

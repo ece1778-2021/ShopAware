@@ -8,10 +8,17 @@
 import SwiftUI
 
 struct ProductCountryView: View {
+    @Binding var barcodeString: String
+    
     @Environment(\.presentationMode) var presentationMode
     
     @State private var width: CGFloat? = 90
     @State private var small_width: CGFloat? = 60
+    
+    @State var selection = 0
+    @State var praise = "Praises"
+    @State var critisims = "Critisims"
+    @State var information = "Facts"
     
     var good: String
     var origin: String
@@ -47,6 +54,19 @@ struct ProductCountryView: View {
         }
         presentationMode.wrappedValue.dismiss()
     }
+    func getColor(rating: String) -> Color {
+        if rating == "A" || rating == "B" {
+            return Color.green
+        } else if rating == "C" {
+            return Color.yellow
+        } else if rating == "D" {
+            return Color.orange
+        }else if rating == "F" {
+            return Color.red
+        }else {
+            return Color.gray
+        }
+    }
     
     var body: some View {
         TabView {
@@ -76,52 +96,86 @@ struct ProductCountryView: View {
             }.tabItem { Label("Countries", systemImage: "globe") }
             if  self.brand.name != "" {
                 VStack{
-                    List{
-                        HStack {
-                            VStack {
-                                Text("Brand: " + brand.name).font(.system(size:14, weight: .heavy))
-                                Text("Rating: " + brand.rating).font(.system(size:14, weight: .heavy))
-                                Button("Add to Cart") {
-                                    let x = shoppingList.shoppingListItems.firstIndex(where: {$0.itemName.lowercased().trimmingCharacters(in: .whitespacesAndNewlines) == good.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)})
-                                    if x == nil  {
-                                        shoppingList.shoppingListItems.append(ListItem(id: String(shoppingList.shoppingListItems.count + 1), itemName: good))
-                                    }
-                                    let i = shoppingList.shoppingListItems.firstIndex(where: {$0.itemName.lowercased().trimmingCharacters(in: .whitespacesAndNewlines) == good.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)})
-                                    shoppingList.shoppingListItems[i!].shoppingListItem.setBrand(brand: brand)
-                                    saveList()
+                    HStack {
+                        VStack(alignment: .center){
+                            Spacer()
+                            Text(brand.name).font(.system(size:36, weight: .heavy)).frame(alignment: .center)
+                            HStack {
+                                Text("Rating: ").font(.system(size:24, weight: .heavy))
+                                Text(brand.rating).font(.system(size:24, weight: .heavy)).foregroundColor(getColor(rating: brand.rating))
+                            }.frame(alignment: .center)
+                            Spacer()
+                            Button {
+                                print("tapped")
+                                let x = shoppingList.shoppingListItems.firstIndex(where: {$0.itemName.lowercased().trimmingCharacters(in: .whitespacesAndNewlines) == good.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)})
+                                print("found x")
+                                if x == nil  {
+                                    print("not found")
+                                    shoppingList.shoppingListItems.append(ListItem(id: String(shoppingList.shoppingListItems.count + 1), itemName: good))
+                                }else {
+                                    print("found")
                                 }
-                            }
-                            AsyncImage(url: URL(string: brand.image_url)!,
-                                       placeholder: { Text("Loading ...") },
-                                       image: { Image(uiImage: $0).resizable() })
-                                .frame(idealHeight: 200).aspectRatio(contentMode: .fit) // 2:3 aspect ratio
-                        }
-                        Text("Praises").font(.system(size:14, weight: .heavy))
-                        ForEach(self.brand.praises, id: \.self) { praise in
-                            Text(praise).font(.system(size:14))
-                        }
-                        Text("Critisims").font(.system(size:14, weight: .heavy))
-                        ForEach(self.brand.critisims, id: \.self) { critisim in
-                            Text(critisim).font(.system(size:14))
-                        }
-                        Text("Information").font(.system(size:14, weight: .heavy))
-                        ForEach(self.brand.information, id: \.self) { info in
-                            Text(info).font(.system(size:14))
-                        }
+                                print("finding element")
+                                let i = shoppingList.shoppingListItems.firstIndex(where: {$0.itemName.lowercased().trimmingCharacters(in: .whitespacesAndNewlines) == good.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)})
+                                shoppingList.shoppingListItems[i!].shoppingListItem.setBrand(brand: brand)
+                                print("before saving")
+                                saveList()
+                                print("after saving")
+                                barcodeString = ""
+                                print("Done")
+                            } label: {
+                                Text("Add to Cart")
+                            }.contentShape(Rectangle())
+                            .frame(alignment: .center)
+                        }.frame(minWidth: 0,
+                                maxWidth: .infinity,
+                                minHeight: 0,
+                                maxHeight: .infinity,
+                                alignment: .center
+                        )
+                        AsyncImage(url: URL(string: brand.image_url)!,
+                                   placeholder: { Text("Loading ...") },
+                                   image: { Image(uiImage: $0).resizable() })
+                            .frame(minWidth: 80, idealWidth: 160, maxWidth: 200, minHeight: 120, idealHeight: 200, maxHeight: 280, alignment: .center).aspectRatio(0.66, contentMode: .fit)
                     }
+                    Picker("Please choose a color", selection: $selection) {
+                        Text(self.praise + " (" + self.brand.praises.count.description + ")").font(.system(size:10)).tag(0)
+                        Text(self.critisims + " (" + self.brand.critisims.count.description + ")").font(.system(size:10)).tag(1)
+                        Text(self.information + " (" + self.brand.information.count.description + ")").font(.system(size:10)).tag(2)
+                    }.pickerStyle(SegmentedPickerStyle()).padding(.horizontal)
+                    List{
+                        if selection == 0 {
+                            ForEach(self.brand.praises, id: \.self) { praise in
+                                Text(praise).font(.system(size:14))
+                            }
+                        }else if selection == 1 {
+                            ForEach(self.brand.critisims, id: \.self) { critisim in
+                                Text(critisim).font(.system(size:14))
+                            }
+                        } else {
+                            ForEach(self.brand.information, id: \.self) { info in
+                                Text(info).font(.system(size:14))
+                            }
+                        }
+                        
+                    }.frame(maxWidth: 300)
                 }.tabItem { Label("Brand", systemImage: "tag") }
             }
             
         }
     }
     
-    init(sat: SweatAndToil, good: String, origin: String, brand: Brand, shoppingList: ListItemStore) {
+    init(sat: SweatAndToil, good: String, origin: String, brand: Brand, shoppingList: ListItemStore, barcodeString: Binding<String>) {
+        self._barcodeString = barcodeString
         self.good = ProductCountryView.getGoodByKeyword(good: good, goods: sat.get_goods_by_name())
         let cgl  = sat.get_countryGoods_by_good(good: self.good)
         self.goodCountryList = cgl
         self.origin = origin
         self.brand = brand
         self.shoppingList = shoppingList
+//        self.praise = self.praise + " (" + self.brand.praises.count.description + ")"
+//        self.critisims = self.critisims + " (" + self.brand.critisims.count.description + ")"
+//        self.information = self.information + " (" + self.brand.information.count.description + ")"
         print(brand.name)
     }
     
