@@ -33,7 +33,8 @@ struct ProductCountryView: View {
                 Text(item.child_labor).font(.system(size:14)).frame(width: small_width, alignment: .leading)
                 Text(item.forced_labor).font(.system(size:14)).frame(width: small_width, alignment: .leading)
                 Text(item.forced_child_labor).font(.system(size:14)).frame(width: small_width, alignment: .leading)
-                Button("+") {
+                //Button("+")
+                Image(systemName: "plus.rectangle.fill").onTapGesture {
                     let i = shoppingList.shoppingListItems.firstIndex(where: {$0.itemName.lowercased().trimmingCharacters(in: .whitespacesAndNewlines) == good.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)})
                     shoppingList.shoppingListItems[i!].shoppingListItem.setCountryGood(countryGood: item)
                     saveList()
@@ -84,7 +85,8 @@ struct ProductCountryView: View {
                         Text("No").font(.system(size:14)).frame(width: small_width, alignment: .leading)
                         Text("No").font(.system(size:14)).frame(width: small_width, alignment: .leading)
                         Text("No").font(.system(size:14)).frame(width: small_width, alignment: .leading)
-                        Button("+") {
+                        //Button("+") {
+                        Image(systemName: "plus.rectangle.fill").onTapGesture {
                             print(good)
                             print(shoppingList.shoppingListItems)
                             let i = shoppingList.shoppingListItems.firstIndex(where: {$0.itemName == good})

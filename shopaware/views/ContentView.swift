@@ -291,7 +291,7 @@ struct ContentView: View {
                                 if self.listItemStore.shoppingListItems.count != 0 {
                                     HStack {
                                         Button(action: {}){
-                                            Text("Clear List")
+                                            Text("Clear").foregroundColor(.red)
                                             
                                         }.frame(minWidth: 0).onTapGesture {
                                             self.listItemStore.shoppingListItems = []
@@ -305,7 +305,7 @@ struct ContentView: View {
                                         Spacer()
                                         
                                         Button(action: {}) {
-                                            Text("Save List")
+                                            Text("Save list").foregroundColor(.green)
                                         }.frame(minWidth: 0).onTapGesture {
                                             saveShoppingList()
                                         }
