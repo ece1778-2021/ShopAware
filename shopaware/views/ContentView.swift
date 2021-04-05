@@ -158,6 +158,8 @@ struct ContentView: View {
                 defaults.set(encoded, forKey: "SavedShoppingList")
             }
         }
+        SavedItemsView.shoppingListList.objectWillChange.send()
+        SavedItemsView.reloadData()
     }
     
     var searchBar : some View {
@@ -324,12 +326,13 @@ struct ContentView: View {
                     
                     else { // Barcode scanner
                         NavigationView{
-                            VStack {
+                            VStack (alignment: .trailing){
                                 Button(action: {
                                     self.torchIsOn.toggle() //Toggle On/Off
                                 }) {
                                     HStack{
-                                    Text("Toggle torch")
+//                                    Text("Toggle torch")
+                                        Image(systemName: "flashlight.off.fill").padding(.trailing)
                                     }
                                 }
                                 Spacer()
