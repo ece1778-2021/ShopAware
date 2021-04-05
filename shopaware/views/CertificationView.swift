@@ -17,8 +17,9 @@ struct CertificationView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(height: 72.0)
+                .padding()
             Spacer()
-            Text(certification.name).font(.system(size:16, weight: .heavy))
+            Text(certification.name).font(.system(size:16, weight: .heavy)).padding()
             
         }
     }

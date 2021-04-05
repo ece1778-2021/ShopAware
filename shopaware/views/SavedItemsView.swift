@@ -53,16 +53,18 @@ struct SavedItemsView : View {
         }
     }
     
+    
+    
     var body: some View {
 //        TabView {
             VStack {
                 Text("Shopping Lists").font(.system(size:18, weight: .heavy))
                 List {
                     ForEach(SavedItemsView.shoppingListList.shoppingList) { item in
-                        getShoppingList(list: item.shoppingListItems)
                         HStack {
+                        getShoppingList(list: item.shoppingListItems)
                             Button(action: {}) {
-                                Text("Delete List")
+                                Text("Delete").foregroundColor(.red)
                             }.frame(minWidth: 0).onTapGesture {
                                 if let index = SavedItemsView.shoppingListList.shoppingList.firstIndex(of: item) {
                                     SavedItemsView.shoppingListList.objectWillChange.send()
@@ -70,15 +72,16 @@ struct SavedItemsView : View {
                                     SavedItemsView.shoppingListList.shoppingList.remove(at: index)
                                 }
                                 saveShoppingList()
+                                presentationMode.wrappedValue.dismiss()
                                 
-                            }
+                            }.padding()
                             Spacer()
                             Button(action: {}) {
-                                Text("Load List")
+                                Text("Load").foregroundColor(.blue)
                             }.frame(minWidth: 0).onTapGesture {
                                 self.currentShoppingList.shoppingListItems = item.shoppingListItems
                                 presentationMode.wrappedValue.dismiss()
-                            }
+                            }.padding()
                         }
                     }
                 }

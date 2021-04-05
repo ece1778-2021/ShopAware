@@ -44,6 +44,8 @@ struct ContentView: View {
     
     @State var redraw = false;
     
+    @State var showingAlert = false
+    
     let defaults = UserDefaults.standard
     
     @State var brandObj: Brand = Brand(name: "", praises: [], critisims:[], information:[], rating:"", image_url: "")
@@ -200,7 +202,7 @@ struct ContentView: View {
                                     Button(action: {
                                         self.isActiveInfo = true
                                     }) {
-                                        Image(systemName: "info.circle")
+                                        Image(systemName: "info.circle.fill")
                                     }.padding().imageScale(.large)
                                 }
                             }
@@ -306,11 +308,18 @@ struct ContentView: View {
                                         
                                         Spacer()
                                         
-                                        Button(action: {}) {
-                                            Text("Save list").foregroundColor(.green)
-                                        }.frame(minWidth: 0).onTapGesture {
+                                        Button(action: {
                                             saveShoppingList()
-                                        }
+                                            showingAlert = true
+                                        }) {
+                                            Text("Save list").foregroundColor(.green)
+                                        }.frame(minWidth: 0)
+                                        .alert(isPresented: $showingAlert) {
+                                                   Alert(title: Text("List saved"), message: Text("Press bookmark button to view saved lists."), dismissButton: .default(Text("Ok")))
+                                               }
+                                        //.onTapGesture {
+                                        //    saveShoppingList()
+                                        //}
                                         
                                     }
                                 }
