@@ -21,7 +21,7 @@ struct SavedItemsView : View {
     let defaults = UserDefaults.standard
     @Environment(\.presentationMode) var presentationMode
 
-    @ObservedObject var shoppingListList: ShoppingListList = ShoppingListList()
+    @ObservedObject static var shoppingListList: ShoppingListList = ShoppingListList()
 //    @StateObject var shoppingList: [ListItemStore]
     var currentShoppingList: ListItemStore
     
@@ -41,15 +41,13 @@ struct SavedItemsView : View {
                     }
                 }
             }
-        }.onTapGesture {
-            
         }
     }
     
     func saveShoppingList() {
 
         let encoder = JSONEncoder()
-        if let encoded = try? encoder.encode(self.shoppingListList.shoppingList) {
+        if let encoded = try? encoder.encode(SavedItemsView.shoppingListList.shoppingList) {
             let defaults = UserDefaults.standard
             defaults.set(encoded, forKey: "SavedShoppingList")
         }
@@ -60,16 +58,19 @@ struct SavedItemsView : View {
             VStack {
                 Text("Shopping Lists").font(.system(size:18, weight: .heavy))
                 List {
-                    ForEach(self.shoppingListList.shoppingList) { item in
+                    ForEach(SavedItemsView.shoppingListList.shoppingList) { item in
                         getShoppingList(list: item.shoppingListItems)
                         HStack {
                             Button(action: {}) {
                                 Text("Delete List")
                             }.frame(minWidth: 0).onTapGesture {
-                                if let index = self.shoppingListList.shoppingList.firstIndex(of: item) {
-                                    self.shoppingListList.shoppingList.remove(at: index)
+                                if let index = SavedItemsView.shoppingListList.shoppingList.firstIndex(of: item) {
+                                    SavedItemsView.shoppingListList.objectWillChange.send()
+                                    SavedItemsView.shoppingListList.shoppingList[index].objectWillChange.send()
+                                    SavedItemsView.shoppingListList.shoppingList.remove(at: index)
                                 }
                                 saveShoppingList()
+                                
                             }
                             Spacer()
                             Button(action: {}) {
@@ -98,15 +99,27 @@ struct SavedItemsView : View {
         if let savedList = defaults.object(forKey: "SavedShoppingList") as? Data {
             let decoder = JSONDecoder()
             if let list = try? decoder.decode([ListItemStore].self, from: savedList) {
-                self.shoppingListList.shoppingList = list
+                SavedItemsView.shoppingListList.shoppingList = list
             }else {
-                self.shoppingListList.shoppingList = []
+                SavedItemsView.shoppingListList.shoppingList = []
             }
         }else {
-            self.shoppingListList.shoppingList = []
+            SavedItemsView.shoppingListList.shoppingList = []
         }
-        
-        
+    }
+    
+    static func reloadData() -> Void {
+        let defaults = UserDefaults.standard
+        if let savedList = defaults.object(forKey: "SavedShoppingList") as? Data {
+            let decoder = JSONDecoder()
+            if let list = try? decoder.decode([ListItemStore].self, from: savedList) {
+                SavedItemsView.shoppingListList.shoppingList = list
+            }else {
+                SavedItemsView.shoppingListList.shoppingList = []
+            }
+        }else {
+            SavedItemsView.shoppingListList.shoppingList = []
+        }
     }
     
 }

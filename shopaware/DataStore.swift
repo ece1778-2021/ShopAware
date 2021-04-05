@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 import Combine
 
-class ListItem: Identifiable, Codable, Equatable {
+struct ListItem: Identifiable, Codable, Equatable {
     static func == (lhs: ListItem, rhs: ListItem) -> Bool {
         return lhs.itemName == rhs.itemName
     }

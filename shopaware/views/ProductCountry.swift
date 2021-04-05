@@ -36,6 +36,7 @@ struct ProductCountryView: View {
                 //Button("+")
                 Image(systemName: "plus.rectangle.fill").onTapGesture {
                     let i = shoppingList.shoppingListItems.firstIndex(where: {$0.itemName.lowercased().trimmingCharacters(in: .whitespacesAndNewlines) == good.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)})
+                    shoppingList.objectWillChange.send()
                     shoppingList.shoppingListItems[i!].shoppingListItem.setCountryGood(countryGood: item)
                     saveList()
                 }
@@ -90,6 +91,7 @@ struct ProductCountryView: View {
                             print(good)
                             print(shoppingList.shoppingListItems)
                             let i = shoppingList.shoppingListItems.firstIndex(where: {$0.itemName == good})
+                            shoppingList.objectWillChange.send()
                             shoppingList.shoppingListItems[i!].shoppingListItem.setCountryGood(countryGood: CountryGood(id: "-1", assessment: Assessment(id: "-1", country: Country(id: "-1", name: "Other Country", region: Region(id: "-1", name: "-1"), num_territories: "-1"), year: "-1", advancement_level: AdvancementLevel(id: "-1", name: "-1"), description: "-1"), year: "-1", country: Country(id: "-1", name: "Other Country", region: Region(id: "-1", name: "-1"), num_territories: "-1"), good: Good(id: "-1", sector: Sector(id: "-1", name: "-1"), name: good), region_name: "-1", child_labor: "No", forced_labor: "No", forced_child_labor: "No"))
                             saveList()
                         }
@@ -108,23 +110,15 @@ struct ProductCountryView: View {
                             }.frame(alignment: .center)
                             Spacer()
                             Button {
-                                print("tapped")
                                 let x = shoppingList.shoppingListItems.firstIndex(where: {$0.itemName.lowercased().trimmingCharacters(in: .whitespacesAndNewlines) == good.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)})
-                                print("found x")
                                 if x == nil  {
-                                    print("not found")
                                     shoppingList.shoppingListItems.append(ListItem(id: String(shoppingList.shoppingListItems.count + 1), itemName: good))
-                                }else {
-                                    print("found")
                                 }
-                                print("finding element")
                                 let i = shoppingList.shoppingListItems.firstIndex(where: {$0.itemName.lowercased().trimmingCharacters(in: .whitespacesAndNewlines) == good.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)})
                                 shoppingList.shoppingListItems[i!].shoppingListItem.setBrand(brand: brand)
-                                print("before saving")
                                 saveList()
-                                print("after saving")
                                 barcodeString = ""
-                                print("Done")
+                                shoppingList.objectWillChange.send()
                             } label: {
                                 Text("Add to Cart")
                             }.contentShape(Rectangle())
